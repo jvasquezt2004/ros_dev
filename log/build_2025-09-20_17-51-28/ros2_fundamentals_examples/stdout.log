@@ -1,0 +1,10 @@
+[  0%] Built target ament_cmake_python_copy_ros2_fundamentals_examples
+[ 50%] Built target minimal_cpp_publisher
+[100%] Built target minimal_cpp_subscriber
+running egg_info
+writing ros2_fundamentals_examples.egg-info/PKG-INFO
+writing dependency_links to ros2_fundamentals_examples.egg-info/dependency_links.txt
+writing top-level names to ros2_fundamentals_examples.egg-info/top_level.txt
+reading manifest file 'ros2_fundamentals_examples.egg-info/SOURCES.txt'
+writing manifest file 'ros2_fundamentals_examples.egg-info/SOURCES.txt'
+[100%] Built target ament_cmake_python_build_ros2_fundamentals_examples_egg

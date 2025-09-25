@@ -1,0 +1,11 @@
+[0.007s] Invoking command in '/home/alonso/Development/School/ros_dev/build/ros2_fundamentals_examples': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/alonso/Development/School/ros_dev/build/ros2_fundamentals_examples -- -j16 -l16
+[0.051s] [  0%] Built target ament_cmake_python_copy_ros2_fundamentals_examples
+[0.051s] [ 50%] Built target minimal_cpp_publisher
+[0.054s] [100%] Built target minimal_cpp_subscriber
+[0.150s] running egg_info
+[0.158s] writing ros2_fundamentals_examples.egg-info/PKG-INFO
+[0.158s] writing dependency_links to ros2_fundamentals_examples.egg-info/dependency_links.txt
+[0.158s] writing top-level names to ros2_fundamentals_examples.egg-info/top_level.txt
+[0.174s] reading manifest file 'ros2_fundamentals_examples.egg-info/SOURCES.txt'
+[0.174s] writing manifest file 'ros2_fundamentals_examples.egg-info/SOURCES.txt'
+[0.196s] [100%] Built target ament_cmake_python_build_ros2_fundamentals_examples_egg

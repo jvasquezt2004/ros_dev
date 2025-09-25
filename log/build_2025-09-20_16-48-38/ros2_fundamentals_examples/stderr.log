@@ -1,0 +1,6 @@
+[31mCMake Error at cmake_install.cmake:78 (file):
+  file INSTALL cannot find
+  "/home/alonso/Development/School/ros_dev/src/ros2_fundamentals_examples/ros2_fundamentals_examples/minimal_py_publisher.py":
+  No such file or directory.
+
+[0m

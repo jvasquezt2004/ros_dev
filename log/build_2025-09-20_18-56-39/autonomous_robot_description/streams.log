@@ -1,0 +1,49 @@
+[0.008s] Invoking command in '/home/alonso/Development/School/ros_dev/build/autonomous_robot_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/alonso/Development/School/ros_dev/build/autonomous_robot_description -- -j16 -l16
+[0.038s] Invoked command in '/home/alonso/Development/School/ros_dev/build/autonomous_robot_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/alonso/Development/School/ros_dev/build/autonomous_robot_description -- -j16 -l16
+[0.046s] Invoking command in '/home/alonso/Development/School/ros_dev/build/autonomous_robot_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/alonso/Development/School/ros_dev/build/autonomous_robot_description
+[0.052s] -- Install configuration: ""
+[0.052s] -- Up-to-date: /home/alonso/Development/School/ros_dev/install/autonomous_robot_description/share/autonomous_robot_description/config
+[0.052s] -- Up-to-date: /home/alonso/Development/School/ros_dev/install/autonomous_robot_description/share/autonomous_robot_description/launch
+[0.052s] -- Up-to-date: /home/alonso/Development/School/ros_dev/install/autonomous_robot_description/share/autonomous_robot_description/meshes
+[0.052s] -- Up-to-date: /home/alonso/Development/School/ros_dev/install/autonomous_robot_description/share/autonomous_robot_description/meshes/rosmaster_x3
+[0.052s] -- Up-to-date: /home/alonso/Development/School/ros_dev/install/autonomous_robot_description/share/autonomous_robot_description/meshes/rosmaster_x3/visual
+[0.052s] -- Up-to-date: /home/alonso/Development/School/ros_dev/install/autonomous_robot_description/share/autonomous_robot_description/meshes/rosmaster_x3/visual/base_link_X3.STL
+[0.052s] -- Up-to-date: /home/alonso/Development/School/ros_dev/install/autonomous_robot_description/share/autonomous_robot_description/meshes/rosmaster_x3/visual/back_left_wheel_X3.STL
+[0.052s] -- Up-to-date: /home/alonso/Development/School/ros_dev/install/autonomous_robot_description/share/autonomous_robot_description/meshes/rosmaster_x3/visual/front_left_wheel_X3.STL
+[0.052s] -- Up-to-date: /home/alonso/Development/School/ros_dev/install/autonomous_robot_description/share/autonomous_robot_description/meshes/rosmaster_x3/visual/back_right_wheel_X3.STL
+[0.052s] -- Up-to-date: /home/alonso/Development/School/ros_dev/install/autonomous_robot_description/share/autonomous_robot_description/meshes/rosmaster_x3/visual/camera_link.STL
+[0.052s] -- Up-to-date: /home/alonso/Development/School/ros_dev/install/autonomous_robot_description/share/autonomous_robot_description/meshes/rosmaster_x3/visual/laser_link.STL
+[0.052s] -- Up-to-date: /home/alonso/Development/School/ros_dev/install/autonomous_robot_description/share/autonomous_robot_description/meshes/rosmaster_x3/visual/front_right_wheel_X3.STL
+[0.052s] -- Up-to-date: /home/alonso/Development/School/ros_dev/install/autonomous_robot_description/share/autonomous_robot_description/meshes/rplidar
+[0.052s] -- Up-to-date: /home/alonso/Development/School/ros_dev/install/autonomous_robot_description/share/autonomous_robot_description/meshes/rplidar/rplidar_s2.stl
+[0.052s] -- Up-to-date: /home/alonso/Development/School/ros_dev/install/autonomous_robot_description/share/autonomous_robot_description/meshes/intel_realsense
+[0.052s] -- Up-to-date: /home/alonso/Development/School/ros_dev/install/autonomous_robot_description/share/autonomous_robot_description/meshes/intel_realsense/visual
+[0.052s] -- Up-to-date: /home/alonso/Development/School/ros_dev/install/autonomous_robot_description/share/autonomous_robot_description/meshes/intel_realsense/visual/d435.stl
+[0.052s] -- Up-to-date: /home/alonso/Development/School/ros_dev/install/autonomous_robot_description/share/autonomous_robot_description/urdf
+[0.052s] -- Up-to-date: /home/alonso/Development/School/ros_dev/install/autonomous_robot_description/share/autonomous_robot_description/urdf/robots
+[0.052s] -- Up-to-date: /home/alonso/Development/School/ros_dev/install/autonomous_robot_description/share/autonomous_robot_description/urdf/robots/rosmaster_x3.urdf.xacro
+[0.052s] -- Up-to-date: /home/alonso/Development/School/ros_dev/install/autonomous_robot_description/share/autonomous_robot_description/urdf/sensors
+[0.052s] -- Up-to-date: /home/alonso/Development/School/ros_dev/install/autonomous_robot_description/share/autonomous_robot_description/urdf/sensors/imu.urdf.xacro
+[0.052s] -- Up-to-date: /home/alonso/Development/School/ros_dev/install/autonomous_robot_description/share/autonomous_robot_description/urdf/sensors/rgbd_camera.urdf.xacro
+[0.053s] -- Up-to-date: /home/alonso/Development/School/ros_dev/install/autonomous_robot_description/share/autonomous_robot_description/urdf/sensors/lidar.urdf.xacro
+[0.053s] -- Up-to-date: /home/alonso/Development/School/ros_dev/install/autonomous_robot_description/share/autonomous_robot_description/urdf/mech
+[0.053s] -- Up-to-date: /home/alonso/Development/School/ros_dev/install/autonomous_robot_description/share/autonomous_robot_description/urdf/mech/rosmaster_x3_base.urdf.xacro
+[0.053s] -- Up-to-date: /home/alonso/Development/School/ros_dev/install/autonomous_robot_description/share/autonomous_robot_description/urdf/mech/mecanum_wheel.urdf.xacro
+[0.053s] -- Up-to-date: /home/alonso/Development/School/ros_dev/install/autonomous_robot_description/share/autonomous_robot_description/urdf/control
+[0.053s] -- Up-to-date: /home/alonso/Development/School/ros_dev/install/autonomous_robot_description/share/autonomous_robot_description/rviz
+[0.053s] -- Up-to-date: /home/alonso/Development/School/ros_dev/install/autonomous_robot_description/share/ament_index/resource_index/package_run_dependencies/autonomous_robot_description
+[0.053s] -- Up-to-date: /home/alonso/Development/School/ros_dev/install/autonomous_robot_description/share/ament_index/resource_index/parent_prefix_path/autonomous_robot_description
+[0.053s] -- Up-to-date: /home/alonso/Development/School/ros_dev/install/autonomous_robot_description/share/autonomous_robot_description/environment/ament_prefix_path.sh
+[0.053s] -- Up-to-date: /home/alonso/Development/School/ros_dev/install/autonomous_robot_description/share/autonomous_robot_description/environment/ament_prefix_path.dsv
+[0.053s] -- Up-to-date: /home/alonso/Development/School/ros_dev/install/autonomous_robot_description/share/autonomous_robot_description/environment/path.sh
+[0.053s] -- Up-to-date: /home/alonso/Development/School/ros_dev/install/autonomous_robot_description/share/autonomous_robot_description/environment/path.dsv
+[0.053s] -- Up-to-date: /home/alonso/Development/School/ros_dev/install/autonomous_robot_description/share/autonomous_robot_description/local_setup.bash
+[0.053s] -- Up-to-date: /home/alonso/Development/School/ros_dev/install/autonomous_robot_description/share/autonomous_robot_description/local_setup.sh
+[0.053s] -- Up-to-date: /home/alonso/Development/School/ros_dev/install/autonomous_robot_description/share/autonomous_robot_description/local_setup.zsh
+[0.053s] -- Up-to-date: /home/alonso/Development/School/ros_dev/install/autonomous_robot_description/share/autonomous_robot_description/local_setup.dsv
+[0.053s] -- Installing: /home/alonso/Development/School/ros_dev/install/autonomous_robot_description/share/autonomous_robot_description/package.dsv
+[0.053s] -- Up-to-date: /home/alonso/Development/School/ros_dev/install/autonomous_robot_description/share/ament_index/resource_index/packages/autonomous_robot_description
+[0.053s] -- Up-to-date: /home/alonso/Development/School/ros_dev/install/autonomous_robot_description/share/autonomous_robot_description/cmake/autonomous_robot_descriptionConfig.cmake
+[0.053s] -- Up-to-date: /home/alonso/Development/School/ros_dev/install/autonomous_robot_description/share/autonomous_robot_description/cmake/autonomous_robot_descriptionConfig-version.cmake
+[0.053s] -- Up-to-date: /home/alonso/Development/School/ros_dev/install/autonomous_robot_description/share/autonomous_robot_description/package.xml
+[0.054s] Invoked command in '/home/alonso/Development/School/ros_dev/build/autonomous_robot_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/alonso/Development/School/ros_dev/build/autonomous_robot_description
