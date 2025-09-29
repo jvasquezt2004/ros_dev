@@ -1,0 +1,29 @@
+[0.617s] Invoking command in '/home/alonso/Development/School/ros_dev/src/autonomous_robot/autonomous_robot_bringup': CONDA_PROMPT_MODIFIER=(base) DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/alonso/Development/School/ros_dev/build/autonomous_robot_bringup/prefix_override:/home/alonso/.local/share/mise/installs/python/3.12.11/lib/python3.12/site-packages/colcon_core/task/python/colcon_distutils_commands:/home/alonso/Development/School/ros_dev/install/autonomous_robot_bringup/lib/python3.12/site-packages:${PYTHONPATH} /home/alonso/.local/share/mise/installs/python/3.12.11/bin/python3.12 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/autonomous_robot_bringup build --build-base /home/alonso/Development/School/ros_dev/build/autonomous_robot_bringup/build install --record /home/alonso/Development/School/ros_dev/build/autonomous_robot_bringup/install.log --single-version-externally-managed install_data
+[0.749s] running egg_info
+[0.755s] creating ../../../build/autonomous_robot_bringup/autonomous_robot_bringup.egg-info
+[0.755s] writing ../../../build/autonomous_robot_bringup/autonomous_robot_bringup.egg-info/PKG-INFO
+[0.755s] writing dependency_links to ../../../build/autonomous_robot_bringup/autonomous_robot_bringup.egg-info/dependency_links.txt
+[0.755s] writing requirements to ../../../build/autonomous_robot_bringup/autonomous_robot_bringup.egg-info/requires.txt
+[0.755s] writing top-level names to ../../../build/autonomous_robot_bringup/autonomous_robot_bringup.egg-info/top_level.txt
+[0.756s] writing manifest file '../../../build/autonomous_robot_bringup/autonomous_robot_bringup.egg-info/SOURCES.txt'
+[0.769s] reading manifest file '../../../build/autonomous_robot_bringup/autonomous_robot_bringup.egg-info/SOURCES.txt'
+[0.769s] adding license file 'LICENSE'
+[0.769s] writing manifest file '../../../build/autonomous_robot_bringup/autonomous_robot_bringup.egg-info/SOURCES.txt'
+[0.769s] running build
+[0.769s] running build_py
+[0.770s] creating /home/alonso/Development/School/ros_dev/build/autonomous_robot_bringup/build/lib/autonomous_robot_bringup
+[0.770s] copying autonomous_robot_bringup/__init__.py -> /home/alonso/Development/School/ros_dev/build/autonomous_robot_bringup/build/lib/autonomous_robot_bringup
+[0.770s] running install
+[0.772s] running install_lib
+[0.778s] creating /home/alonso/Development/School/ros_dev/install/autonomous_robot_bringup/lib/python3.12/site-packages/autonomous_robot_bringup
+[0.778s] copying /home/alonso/Development/School/ros_dev/build/autonomous_robot_bringup/build/lib/autonomous_robot_bringup/__init__.py -> /home/alonso/Development/School/ros_dev/install/autonomous_robot_bringup/lib/python3.12/site-packages/autonomous_robot_bringup
+[0.778s] byte-compiling /home/alonso/Development/School/ros_dev/install/autonomous_robot_bringup/lib/python3.12/site-packages/autonomous_robot_bringup/__init__.py to __init__.cpython-312.pyc
+[0.779s] running install_data
+[0.779s] creating /home/alonso/Development/School/ros_dev/install/autonomous_robot_bringup/share/ament_index/resource_index/packages
+[0.779s] copying resource/autonomous_robot_bringup -> /home/alonso/Development/School/ros_dev/install/autonomous_robot_bringup/share/ament_index/resource_index/packages
+[0.779s] copying package.xml -> /home/alonso/Development/School/ros_dev/install/autonomous_robot_bringup/share/autonomous_robot_bringup
+[0.779s] running install_egg_info
+[0.785s] Copying ../../../build/autonomous_robot_bringup/autonomous_robot_bringup.egg-info to /home/alonso/Development/School/ros_dev/install/autonomous_robot_bringup/lib/python3.12/site-packages/autonomous_robot_bringup-0.0.0-py3.12.egg-info
+[0.786s] running install_scripts
+[0.823s] writing list of installed files to '/home/alonso/Development/School/ros_dev/build/autonomous_robot_bringup/install.log'
+[0.844s] Invoked command in '/home/alonso/Development/School/ros_dev/src/autonomous_robot/autonomous_robot_bringup' returned '0': CONDA_PROMPT_MODIFIER=(base) DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/alonso/Development/School/ros_dev/build/autonomous_robot_bringup/prefix_override:/home/alonso/.local/share/mise/installs/python/3.12.11/lib/python3.12/site-packages/colcon_core/task/python/colcon_distutils_commands:/home/alonso/Development/School/ros_dev/install/autonomous_robot_bringup/lib/python3.12/site-packages:${PYTHONPATH} /home/alonso/.local/share/mise/installs/python/3.12.11/bin/python3.12 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/autonomous_robot_bringup build --build-base /home/alonso/Development/School/ros_dev/build/autonomous_robot_bringup/build install --record /home/alonso/Development/School/ros_dev/build/autonomous_robot_bringup/install.log --single-version-externally-managed install_data

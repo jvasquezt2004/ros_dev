@@ -1,0 +1,18 @@
+running egg_info
+writing ../../../build/autonomous_robot_system_tests/autonomous_robot_system_tests.egg-info/PKG-INFO
+writing dependency_links to ../../../build/autonomous_robot_system_tests/autonomous_robot_system_tests.egg-info/dependency_links.txt
+writing requirements to ../../../build/autonomous_robot_system_tests/autonomous_robot_system_tests.egg-info/requires.txt
+writing top-level names to ../../../build/autonomous_robot_system_tests/autonomous_robot_system_tests.egg-info/top_level.txt
+reading manifest file '../../../build/autonomous_robot_system_tests/autonomous_robot_system_tests.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file '../../../build/autonomous_robot_system_tests/autonomous_robot_system_tests.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+running install_data
+running install_egg_info
+removing '/home/alonso/Development/School/ros_dev/install/autonomous_robot_system_tests/lib/python3.12/site-packages/autonomous_robot_system_tests-0.0.0-py3.12.egg-info' (and everything under it)
+Copying ../../../build/autonomous_robot_system_tests/autonomous_robot_system_tests.egg-info to /home/alonso/Development/School/ros_dev/install/autonomous_robot_system_tests/lib/python3.12/site-packages/autonomous_robot_system_tests-0.0.0-py3.12.egg-info
+running install_scripts
+writing list of installed files to '/home/alonso/Development/School/ros_dev/build/autonomous_robot_system_tests/install.log'

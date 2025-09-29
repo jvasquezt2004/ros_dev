@@ -1,0 +1,15 @@
+LICENSE
+package.xml
+setup.cfg
+setup.py
+../../../build/autonomous_robot_system_tests/autonomous_robot_system_tests.egg-info/PKG-INFO
+../../../build/autonomous_robot_system_tests/autonomous_robot_system_tests.egg-info/SOURCES.txt
+../../../build/autonomous_robot_system_tests/autonomous_robot_system_tests.egg-info/dependency_links.txt
+../../../build/autonomous_robot_system_tests/autonomous_robot_system_tests.egg-info/requires.txt
+../../../build/autonomous_robot_system_tests/autonomous_robot_system_tests.egg-info/top_level.txt
+../../../build/autonomous_robot_system_tests/autonomous_robot_system_tests.egg-info/zip-safe
+autonomous_robot_system_tests/__init__.py
+resource/autonomous_robot_system_tests
+test/test_copyright.py
+test/test_flake8.py
+test/test_pep257.py

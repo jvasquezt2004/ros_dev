@@ -1,3 +1,4 @@
+/home/alonso/Development/School/ros_dev/install/autonomous_robot_description/share/autonomous_robot_description/launch/robot_state_publisher.launch.py
 /home/alonso/Development/School/ros_dev/install/autonomous_robot_description/share/autonomous_robot_description/meshes/rosmaster_x3/visual/base_link_X3.STL
 /home/alonso/Development/School/ros_dev/install/autonomous_robot_description/share/autonomous_robot_description/meshes/rosmaster_x3/visual/back_left_wheel_X3.STL
 /home/alonso/Development/School/ros_dev/install/autonomous_robot_description/share/autonomous_robot_description/meshes/rosmaster_x3/visual/front_left_wheel_X3.STL
@@ -13,6 +14,7 @@
 /home/alonso/Development/School/ros_dev/install/autonomous_robot_description/share/autonomous_robot_description/urdf/sensors/lidar.urdf.xacro
 /home/alonso/Development/School/ros_dev/install/autonomous_robot_description/share/autonomous_robot_description/urdf/mech/rosmaster_x3_base.urdf.xacro
 /home/alonso/Development/School/ros_dev/install/autonomous_robot_description/share/autonomous_robot_description/urdf/mech/mecanum_wheel.urdf.xacro
+/home/alonso/Development/School/ros_dev/install/autonomous_robot_description/share/autonomous_robot_description/rviz/autonomous_robot_description.rviz
 /home/alonso/Development/School/ros_dev/install/autonomous_robot_description/share/ament_index/resource_index/package_run_dependencies/autonomous_robot_description
 /home/alonso/Development/School/ros_dev/install/autonomous_robot_description/share/ament_index/resource_index/parent_prefix_path/autonomous_robot_description
 /home/alonso/Development/School/ros_dev/install/autonomous_robot_description/share/autonomous_robot_description/environment/ament_prefix_path.sh

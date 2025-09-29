@@ -1,0 +1,23 @@
+[0.136s] Invoking command in '/home/alonso/Development/School/ros_dev/build/autonomous_robot_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/alonso/Development/School/ros_dev/install/autonomous_robot_system_tests:/home/alonso/Development/School/ros_dev/install/autonomous_robot_gazebo:/home/alonso/Development/School/ros_dev/install/autonomous_robot_bringup:/opt/ros/jazzy CONDA_PROMPT_MODIFIER=(base) DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/alonso/Development/School/ros_dev/build/autonomous_robot_description -- -j16 -l16
+[0.373s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.374s] -- Found urdf_tutorial: 1.1.0 (/opt/ros/jazzy/share/urdf_tutorial/cmake)
+[0.379s] [31mCMake Error at CMakeLists.txt:21 (find_package):
+[0.379s]   By not providing "Findament_lint_auto.cmake" in CMAKE_MODULE_PATH this
+[0.379s]   project has asked CMake to find a package configuration file provided by
+[0.380s]   "ament_lint_auto", but CMake did not find one.
+[0.380s] 
+[0.380s]   Could not find a package configuration file provided by "ament_lint_auto"
+[0.380s]   with any of the following names:
+[0.380s] 
+[0.380s]     ament_lint_autoConfig.cmake
+[0.380s]     ament_lint_auto-config.cmake
+[0.380s] 
+[0.380s]   Add the installation prefix of "ament_lint_auto" to CMAKE_PREFIX_PATH or
+[0.380s]   set "ament_lint_auto_DIR" to a directory containing one of the above files.
+[0.380s]   If "ament_lint_auto" provides a separate development package or SDK, be
+[0.380s]   sure it has been installed.
+[0.381s] 
+[0.381s] [0m
+[0.381s] -- Configuring incomplete, errors occurred!
+[0.382s] gmake: *** [Makefile:226: cmake_check_build_system] Error 1
+[0.384s] Invoked command in '/home/alonso/Development/School/ros_dev/build/autonomous_robot_description' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/alonso/Development/School/ros_dev/install/autonomous_robot_system_tests:/home/alonso/Development/School/ros_dev/install/autonomous_robot_gazebo:/home/alonso/Development/School/ros_dev/install/autonomous_robot_bringup:/opt/ros/jazzy CONDA_PROMPT_MODIFIER=(base) DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/alonso/Development/School/ros_dev/build/autonomous_robot_description -- -j16 -l16

@@ -1,0 +1,68 @@
+[0.364s] Invoking command in '/home/alonso/Development/School/ros_dev/build/ros2_fundamentals_examples': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/alonso/Development/School/ros_dev/install/autonomous_robot_system_tests:/home/alonso/Development/School/ros_dev/install/autonomous_robot_gazebo:/home/alonso/Development/School/ros_dev/install/autonomous_robot_bringup:/opt/ros/jazzy CONDA_PROMPT_MODIFIER=(base) DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/alonso/Development/School/ros_dev/build/ros2_fundamentals_examples -- -j16 -l16
+[0.386s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.536s] -- Found rclcpp: 28.1.12 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.575s] -- Found rosidl_generator_c: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.585s] -- Found rosidl_generator_cpp: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.601s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.617s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.676s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.677s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.733s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.797s] -- Found rclpy: 7.1.5 (/opt/ros/jazzy/share/rclpy/cmake)
+[0.797s] -- Found std_msgs: 5.3.6 (/opt/ros/jazzy/share/std_msgs/cmake)
+[0.882s] -- Found ament_lint_auto: 0.17.3 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[0.954s] -- Configuring done (0.6s)
+[0.969s] -- Generating done (0.0s)
+[0.972s] -- Build files have been written to: /home/alonso/Development/School/ros_dev/build/ros2_fundamentals_examples
+[1.012s] [  0%] Built target ament_cmake_python_copy_ros2_fundamentals_examples
+[1.020s] [ 50%] Built target minimal_cpp_subscriber
+[1.022s] [100%] Built target minimal_cpp_publisher
+[1.158s] running egg_info
+[1.164s] writing ros2_fundamentals_examples.egg-info/PKG-INFO
+[1.165s] writing dependency_links to ros2_fundamentals_examples.egg-info/dependency_links.txt
+[1.165s] writing top-level names to ros2_fundamentals_examples.egg-info/top_level.txt
+[1.178s] reading manifest file 'ros2_fundamentals_examples.egg-info/SOURCES.txt'
+[1.178s] writing manifest file 'ros2_fundamentals_examples.egg-info/SOURCES.txt'
+[1.199s] [100%] Built target ament_cmake_python_build_ros2_fundamentals_examples_egg
+[1.208s] Invoked command in '/home/alonso/Development/School/ros_dev/build/ros2_fundamentals_examples' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/alonso/Development/School/ros_dev/install/autonomous_robot_system_tests:/home/alonso/Development/School/ros_dev/install/autonomous_robot_gazebo:/home/alonso/Development/School/ros_dev/install/autonomous_robot_bringup:/opt/ros/jazzy CONDA_PROMPT_MODIFIER=(base) DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/alonso/Development/School/ros_dev/build/ros2_fundamentals_examples -- -j16 -l16
+[1.210s] Invoking command in '/home/alonso/Development/School/ros_dev/build/ros2_fundamentals_examples': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/alonso/Development/School/ros_dev/install/autonomous_robot_system_tests:/home/alonso/Development/School/ros_dev/install/autonomous_robot_gazebo:/home/alonso/Development/School/ros_dev/install/autonomous_robot_bringup:/opt/ros/jazzy CONDA_PROMPT_MODIFIER=(base) DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/alonso/Development/School/ros_dev/build/ros2_fundamentals_examples
+[1.216s] -- Install configuration: ""
+[1.216s] -- Up-to-date: /home/alonso/Development/School/ros_dev/install/ros2_fundamentals_examples/share/ros2_fundamentals_examples/ros2_fundamentals_examples
+[1.216s] -- Up-to-date: /home/alonso/Development/School/ros_dev/install/ros2_fundamentals_examples/share/ros2_fundamentals_examples/ros2_fundamentals_examples/py_minimal_publisher.py
+[1.216s] -- Up-to-date: /home/alonso/Development/School/ros_dev/install/ros2_fundamentals_examples/share/ros2_fundamentals_examples/ros2_fundamentals_examples/py_minimal_subscriber.py
+[1.216s] -- Up-to-date: /home/alonso/Development/School/ros_dev/install/ros2_fundamentals_examples/share/ros2_fundamentals_examples/ros2_fundamentals_examples/__init__.py
+[1.216s] -- Up-to-date: /home/alonso/Development/School/ros_dev/install/ros2_fundamentals_examples/include
+[1.216s] -- Up-to-date: /home/alonso/Development/School/ros_dev/install/ros2_fundamentals_examples/include/ros2_fundamentals_examples
+[1.216s] -- Up-to-date: /home/alonso/Development/School/ros_dev/install/ros2_fundamentals_examples/lib/ros2_fundamentals_examples/minimal_cpp_publisher
+[1.216s] -- Up-to-date: /home/alonso/Development/School/ros_dev/install/ros2_fundamentals_examples/lib/ros2_fundamentals_examples/minimal_cpp_subscriber
+[1.217s] -- Up-to-date: /home/alonso/Development/School/ros_dev/install/ros2_fundamentals_examples/share/ros2_fundamentals_examples/environment/pythonpath.sh
+[1.217s] -- Up-to-date: /home/alonso/Development/School/ros_dev/install/ros2_fundamentals_examples/share/ros2_fundamentals_examples/environment/pythonpath.dsv
+[1.217s] -- Up-to-date: /home/alonso/Development/School/ros_dev/install/ros2_fundamentals_examples/lib/python3.13/site-packages/ros2_fundamentals_examples-0.0.0-py3.13.egg-info
+[1.217s] -- Installing: /home/alonso/Development/School/ros_dev/install/ros2_fundamentals_examples/lib/python3.13/site-packages/ros2_fundamentals_examples-0.0.0-py3.13.egg-info/dependency_links.txt
+[1.217s] -- Installing: /home/alonso/Development/School/ros_dev/install/ros2_fundamentals_examples/lib/python3.13/site-packages/ros2_fundamentals_examples-0.0.0-py3.13.egg-info/SOURCES.txt
+[1.217s] -- Installing: /home/alonso/Development/School/ros_dev/install/ros2_fundamentals_examples/lib/python3.13/site-packages/ros2_fundamentals_examples-0.0.0-py3.13.egg-info/top_level.txt
+[1.217s] -- Installing: /home/alonso/Development/School/ros_dev/install/ros2_fundamentals_examples/lib/python3.13/site-packages/ros2_fundamentals_examples-0.0.0-py3.13.egg-info/PKG-INFO
+[1.217s] -- Up-to-date: /home/alonso/Development/School/ros_dev/install/ros2_fundamentals_examples/lib/python3.13/site-packages/ros2_fundamentals_examples
+[1.217s] -- Up-to-date: /home/alonso/Development/School/ros_dev/install/ros2_fundamentals_examples/lib/python3.13/site-packages/ros2_fundamentals_examples/py_minimal_publisher.py
+[1.217s] -- Up-to-date: /home/alonso/Development/School/ros_dev/install/ros2_fundamentals_examples/lib/python3.13/site-packages/ros2_fundamentals_examples/py_minimal_subscriber.py
+[1.217s] -- Up-to-date: /home/alonso/Development/School/ros_dev/install/ros2_fundamentals_examples/lib/python3.13/site-packages/ros2_fundamentals_examples/__init__.py
+[1.237s] Listing '/home/alonso/Development/School/ros_dev/install/ros2_fundamentals_examples/lib/python3.13/site-packages/ros2_fundamentals_examples'...
+[1.241s] -- Up-to-date: /home/alonso/Development/School/ros_dev/install/ros2_fundamentals_examples/lib/ros2_fundamentals_examples/py_minimal_publisher.py
+[1.241s] -- Up-to-date: /home/alonso/Development/School/ros_dev/install/ros2_fundamentals_examples/lib/ros2_fundamentals_examples/py_minimal_subscriber.py
+[1.241s] -- Up-to-date: /home/alonso/Development/School/ros_dev/install/ros2_fundamentals_examples/share/ament_index/resource_index/package_run_dependencies/ros2_fundamentals_examples
+[1.241s] -- Installing: /home/alonso/Development/School/ros_dev/install/ros2_fundamentals_examples/share/ament_index/resource_index/parent_prefix_path/ros2_fundamentals_examples
+[1.241s] -- Up-to-date: /home/alonso/Development/School/ros_dev/install/ros2_fundamentals_examples/share/ros2_fundamentals_examples/environment/ament_prefix_path.sh
+[1.241s] -- Up-to-date: /home/alonso/Development/School/ros_dev/install/ros2_fundamentals_examples/share/ros2_fundamentals_examples/environment/ament_prefix_path.dsv
+[1.241s] -- Up-to-date: /home/alonso/Development/School/ros_dev/install/ros2_fundamentals_examples/share/ros2_fundamentals_examples/environment/path.sh
+[1.241s] -- Up-to-date: /home/alonso/Development/School/ros_dev/install/ros2_fundamentals_examples/share/ros2_fundamentals_examples/environment/path.dsv
+[1.241s] -- Up-to-date: /home/alonso/Development/School/ros_dev/install/ros2_fundamentals_examples/share/ros2_fundamentals_examples/local_setup.bash
+[1.241s] -- Up-to-date: /home/alonso/Development/School/ros_dev/install/ros2_fundamentals_examples/share/ros2_fundamentals_examples/local_setup.sh
+[1.241s] -- Up-to-date: /home/alonso/Development/School/ros_dev/install/ros2_fundamentals_examples/share/ros2_fundamentals_examples/local_setup.zsh
+[1.241s] -- Up-to-date: /home/alonso/Development/School/ros_dev/install/ros2_fundamentals_examples/share/ros2_fundamentals_examples/local_setup.dsv
+[1.241s] -- Installing: /home/alonso/Development/School/ros_dev/install/ros2_fundamentals_examples/share/ros2_fundamentals_examples/package.dsv
+[1.242s] -- Up-to-date: /home/alonso/Development/School/ros_dev/install/ros2_fundamentals_examples/share/ament_index/resource_index/packages/ros2_fundamentals_examples
+[1.242s] -- Up-to-date: /home/alonso/Development/School/ros_dev/install/ros2_fundamentals_examples/share/ros2_fundamentals_examples/cmake/ament_cmake_export_include_directories-extras.cmake
+[1.242s] -- Up-to-date: /home/alonso/Development/School/ros_dev/install/ros2_fundamentals_examples/share/ros2_fundamentals_examples/cmake/ros2_fundamentals_examplesConfig.cmake
+[1.242s] -- Up-to-date: /home/alonso/Development/School/ros_dev/install/ros2_fundamentals_examples/share/ros2_fundamentals_examples/cmake/ros2_fundamentals_examplesConfig-version.cmake
+[1.242s] -- Up-to-date: /home/alonso/Development/School/ros_dev/install/ros2_fundamentals_examples/share/ros2_fundamentals_examples/package.xml
+[1.244s] Invoked command in '/home/alonso/Development/School/ros_dev/build/ros2_fundamentals_examples' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/alonso/Development/School/ros_dev/install/autonomous_robot_system_tests:/home/alonso/Development/School/ros_dev/install/autonomous_robot_gazebo:/home/alonso/Development/School/ros_dev/install/autonomous_robot_bringup:/opt/ros/jazzy CONDA_PROMPT_MODIFIER=(base) DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/alonso/Development/School/ros_dev/build/ros2_fundamentals_examples
