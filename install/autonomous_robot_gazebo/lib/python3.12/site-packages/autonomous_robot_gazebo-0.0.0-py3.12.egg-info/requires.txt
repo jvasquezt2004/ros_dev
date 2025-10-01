@@ -1,5 +1,5 @@
-numpy
 setuptools
+numpy
 
 [test]
 pytest

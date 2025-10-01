@@ -24,6 +24,8 @@ setup(
     },
     entry_points={
         'console_scripts': [
+            'twist_stamper = autonomous_robot_bringup.twist_stamper:main',
+            'simple_teleop = autonomous_robot_bringup.simple_teleop:main',
         ],
     },
 )

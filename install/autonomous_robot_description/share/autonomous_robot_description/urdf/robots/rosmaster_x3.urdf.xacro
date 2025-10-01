@@ -64,4 +64,39 @@
       update_rate="15.0"
       topic_name="imu/data"/>
 
+    <ros2_control name="GazeboSystem" type="system">
+      <hardware>
+        <plugin>gz_ros2_control/GazeboSystem</plugin>
+      </hardware>
+      <joint name="$(arg prefix)front_left_wheel_joint">
+        <command_interface name="velocity"/>
+        <state_interface name="position"/>
+        <state_interface name="velocity"/>
+      </joint>
+      <joint name="$(arg prefix)front_right_wheel_joint">
+        <command_interface name="velocity"/>
+        <state_interface name="position"/>
+        <state_interface name="velocity"/>
+      </joint>
+      <joint name="$(arg prefix)back_left_wheel_joint">
+        <command_interface name="velocity"/>
+        <state_interface name="position"/>
+        <state_interface name="velocity"/>
+      </joint>
+      <joint name="$(arg prefix)back_right_wheel_joint">
+        <command_interface name="velocity"/>
+        <state_interface name="position"/>
+        <state_interface name="velocity"/>
+      </joint>
+    </ros2_control>
+
+    <xacro:if value="$(arg use_gazebo)">
+      <gazebo>
+        <plugin filename="libgz_ros2_control-system.so"
+          name="gz_ros2_control::GazeboSimROS2ControlPlugin">
+          <parameters>$(find autonomous_robot_description)/config/$(arg robot_name)/simple_controllers.yaml</parameters>
+        </plugin>
+      </gazebo>
+    </xacro:if>
+
 </robot>

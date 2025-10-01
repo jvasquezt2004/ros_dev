@@ -5,10 +5,13 @@ setup.py
 ../../../build/autonomous_robot_bringup/autonomous_robot_bringup.egg-info/PKG-INFO
 ../../../build/autonomous_robot_bringup/autonomous_robot_bringup.egg-info/SOURCES.txt
 ../../../build/autonomous_robot_bringup/autonomous_robot_bringup.egg-info/dependency_links.txt
+../../../build/autonomous_robot_bringup/autonomous_robot_bringup.egg-info/entry_points.txt
 ../../../build/autonomous_robot_bringup/autonomous_robot_bringup.egg-info/requires.txt
 ../../../build/autonomous_robot_bringup/autonomous_robot_bringup.egg-info/top_level.txt
 ../../../build/autonomous_robot_bringup/autonomous_robot_bringup.egg-info/zip-safe
 autonomous_robot_bringup/__init__.py
+autonomous_robot_bringup/simple_teleop.py
+autonomous_robot_bringup/twist_stamper.py
 resource/autonomous_robot_bringup
 test/test_copyright.py
 test/test_flake8.py

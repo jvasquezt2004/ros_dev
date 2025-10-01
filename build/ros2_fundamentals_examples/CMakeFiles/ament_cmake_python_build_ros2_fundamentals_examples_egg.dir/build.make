@@ -67,7 +67,7 @@ include CMakeFiles/ament_cmake_python_build_ros2_fundamentals_examples_egg.dir/c
 include CMakeFiles/ament_cmake_python_build_ros2_fundamentals_examples_egg.dir/progress.make
 
 CMakeFiles/ament_cmake_python_build_ros2_fundamentals_examples_egg:
-	cd /home/alonso/Development/School/ros_dev/build/ros2_fundamentals_examples/ament_cmake_python/ros2_fundamentals_examples && /home/alonso/.local/share/mise/installs/python/3.13.7/bin/python3 setup.py egg_info
+	cd /home/alonso/Development/School/ros_dev/build/ros2_fundamentals_examples/ament_cmake_python/ros2_fundamentals_examples && /home/alonso/anaconda3/bin/python3 setup.py egg_info
 
 ament_cmake_python_build_ros2_fundamentals_examples_egg: CMakeFiles/ament_cmake_python_build_ros2_fundamentals_examples_egg
 ament_cmake_python_build_ros2_fundamentals_examples_egg: CMakeFiles/ament_cmake_python_build_ros2_fundamentals_examples_egg.dir/build.make

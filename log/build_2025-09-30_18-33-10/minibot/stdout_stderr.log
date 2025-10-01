@@ -1,0 +1,26 @@
+running egg_info
+creating ../../build/minibot/minibot.egg-info
+writing ../../build/minibot/minibot.egg-info/PKG-INFO
+writing dependency_links to ../../build/minibot/minibot.egg-info/dependency_links.txt
+writing requirements to ../../build/minibot/minibot.egg-info/requires.txt
+writing top-level names to ../../build/minibot/minibot.egg-info/top_level.txt
+writing manifest file '../../build/minibot/minibot.egg-info/SOURCES.txt'
+reading manifest file '../../build/minibot/minibot.egg-info/SOURCES.txt'
+writing manifest file '../../build/minibot/minibot.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/alonso/Development/School/ros_dev/build/minibot/build/lib/minibot
+copying minibot/__init__.py -> /home/alonso/Development/School/ros_dev/build/minibot/build/lib/minibot
+running install
+running install_lib
+creating /home/alonso/Development/School/ros_dev/install/minibot/lib/python3.12/site-packages/minibot
+copying /home/alonso/Development/School/ros_dev/build/minibot/build/lib/minibot/__init__.py -> /home/alonso/Development/School/ros_dev/install/minibot/lib/python3.12/site-packages/minibot
+byte-compiling /home/alonso/Development/School/ros_dev/install/minibot/lib/python3.12/site-packages/minibot/__init__.py to __init__.cpython-312.pyc
+running install_data
+creating /home/alonso/Development/School/ros_dev/install/minibot/share/ament_index/resource_index/packages
+copying resource/minibot -> /home/alonso/Development/School/ros_dev/install/minibot/share/ament_index/resource_index/packages
+copying package.xml -> /home/alonso/Development/School/ros_dev/install/minibot/share/minibot
+running install_egg_info
+Copying ../../build/minibot/minibot.egg-info to /home/alonso/Development/School/ros_dev/install/minibot/lib/python3.12/site-packages/minibot-0.0.0-py3.12.egg-info
+running install_scripts
+writing list of installed files to '/home/alonso/Development/School/ros_dev/build/minibot/install.log'

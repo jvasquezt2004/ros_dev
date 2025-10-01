@@ -117,7 +117,7 @@ endif()
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   execute_process(
         COMMAND
-        "/home/alonso/.local/share/mise/installs/python/3.13.7/bin/python3" "-m" "compileall"
+        "/home/alonso/anaconda3/bin/python3" "-m" "compileall"
         "/home/alonso/Development/School/ros_dev/install/ros2_fundamentals_examples/lib/python3.13/site-packages/ros2_fundamentals_examples"
       )
 endif()

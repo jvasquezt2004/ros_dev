@@ -1,0 +1,3 @@
+[console_scripts]
+simple_teleop = autonomous_robot_bringup.simple_teleop:main
+twist_stamper = autonomous_robot_bringup.twist_stamper:main
