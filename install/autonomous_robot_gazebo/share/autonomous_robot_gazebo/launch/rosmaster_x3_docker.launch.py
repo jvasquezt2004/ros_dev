@@ -29,7 +29,7 @@ def generate_launch_description() -> LaunchDescription:
 
     world_path = PathJoinSubstitution([gazebo_share, 'worlds', world])
     models_path = PathJoinSubstitution([gazebo_share, 'models'])
-    
+
     # Controller configuration file
     controllers_config = PathJoinSubstitution([
         description_share,

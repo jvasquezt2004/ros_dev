@@ -1,0 +1,26 @@
+running egg_info
+writing ../../../build/autonomous_robot_bringup/autonomous_robot_bringup.egg-info/PKG-INFO
+writing dependency_links to ../../../build/autonomous_robot_bringup/autonomous_robot_bringup.egg-info/dependency_links.txt
+writing entry points to ../../../build/autonomous_robot_bringup/autonomous_robot_bringup.egg-info/entry_points.txt
+writing requirements to ../../../build/autonomous_robot_bringup/autonomous_robot_bringup.egg-info/requires.txt
+writing top-level names to ../../../build/autonomous_robot_bringup/autonomous_robot_bringup.egg-info/top_level.txt
+reading manifest file '../../../build/autonomous_robot_bringup/autonomous_robot_bringup.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file '../../../build/autonomous_robot_bringup/autonomous_robot_bringup.egg-info/SOURCES.txt'
+running build
+running build_py
+copying autonomous_robot_bringup/twist_stamper.py -> /home/alonso/Development/School/ros_dev/build/autonomous_robot_bringup/build/lib/autonomous_robot_bringup
+copying autonomous_robot_bringup/simple_teleop.py -> /home/alonso/Development/School/ros_dev/build/autonomous_robot_bringup/build/lib/autonomous_robot_bringup
+copying autonomous_robot_bringup/__init__.py -> /home/alonso/Development/School/ros_dev/build/autonomous_robot_bringup/build/lib/autonomous_robot_bringup
+running install
+running install_lib
+running install_data
+copying resource/autonomous_robot_bringup -> /home/alonso/Development/School/ros_dev/install/autonomous_robot_bringup/share/ament_index/resource_index/packages
+copying package.xml -> /home/alonso/Development/School/ros_dev/install/autonomous_robot_bringup/share/autonomous_robot_bringup
+running install_egg_info
+removing '/home/alonso/Development/School/ros_dev/install/autonomous_robot_bringup/lib/python3.12/site-packages/autonomous_robot_bringup-0.0.0-py3.12.egg-info' (and everything under it)
+Copying ../../../build/autonomous_robot_bringup/autonomous_robot_bringup.egg-info to /home/alonso/Development/School/ros_dev/install/autonomous_robot_bringup/lib/python3.12/site-packages/autonomous_robot_bringup-0.0.0-py3.12.egg-info
+running install_scripts
+Installing simple_teleop script to /home/alonso/Development/School/ros_dev/install/autonomous_robot_bringup/lib/autonomous_robot_bringup
+Installing twist_stamper script to /home/alonso/Development/School/ros_dev/install/autonomous_robot_bringup/lib/autonomous_robot_bringup
+writing list of installed files to '/home/alonso/Development/School/ros_dev/build/autonomous_robot_bringup/install.log'

@@ -1,0 +1,23 @@
+[0.606s] Invoking command in '/home/alonso/Development/School/ros_dev/src/autonomous_robot/autonomous_robot_system_tests': CONDA_PROMPT_MODIFIER=(base) DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/alonso/Development/School/ros_dev/build/autonomous_robot_system_tests/prefix_override:/home/alonso/.local/share/mise/installs/python/3.12.11/lib/python3.12/site-packages/colcon_core/task/python/colcon_distutils_commands:/home/alonso/Development/School/ros_dev/install/autonomous_robot_system_tests/lib/python3.12/site-packages:${PYTHONPATH} /home/alonso/.local/share/mise/installs/python/3.12.11/bin/python3.12 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/autonomous_robot_system_tests build --build-base /home/alonso/Development/School/ros_dev/build/autonomous_robot_system_tests/build install --record /home/alonso/Development/School/ros_dev/build/autonomous_robot_system_tests/install.log --single-version-externally-managed install_data
+[0.721s] running egg_info
+[0.727s] writing ../../../build/autonomous_robot_system_tests/autonomous_robot_system_tests.egg-info/PKG-INFO
+[0.727s] writing dependency_links to ../../../build/autonomous_robot_system_tests/autonomous_robot_system_tests.egg-info/dependency_links.txt
+[0.728s] writing requirements to ../../../build/autonomous_robot_system_tests/autonomous_robot_system_tests.egg-info/requires.txt
+[0.728s] writing top-level names to ../../../build/autonomous_robot_system_tests/autonomous_robot_system_tests.egg-info/top_level.txt
+[0.741s] reading manifest file '../../../build/autonomous_robot_system_tests/autonomous_robot_system_tests.egg-info/SOURCES.txt'
+[0.742s] adding license file 'LICENSE'
+[0.742s] writing manifest file '../../../build/autonomous_robot_system_tests/autonomous_robot_system_tests.egg-info/SOURCES.txt'
+[0.742s] running build
+[0.742s] running build_py
+[0.743s] copying autonomous_robot_system_tests/__init__.py -> /home/alonso/Development/School/ros_dev/build/autonomous_robot_system_tests/build/lib/autonomous_robot_system_tests
+[0.743s] running install
+[0.745s] running install_lib
+[0.751s] running install_data
+[0.752s] copying resource/autonomous_robot_system_tests -> /home/alonso/Development/School/ros_dev/install/autonomous_robot_system_tests/share/ament_index/resource_index/packages
+[0.752s] copying package.xml -> /home/alonso/Development/School/ros_dev/install/autonomous_robot_system_tests/share/autonomous_robot_system_tests
+[0.752s] running install_egg_info
+[0.757s] removing '/home/alonso/Development/School/ros_dev/install/autonomous_robot_system_tests/lib/python3.12/site-packages/autonomous_robot_system_tests-0.0.0-py3.12.egg-info' (and everything under it)
+[0.757s] Copying ../../../build/autonomous_robot_system_tests/autonomous_robot_system_tests.egg-info to /home/alonso/Development/School/ros_dev/install/autonomous_robot_system_tests/lib/python3.12/site-packages/autonomous_robot_system_tests-0.0.0-py3.12.egg-info
+[0.757s] running install_scripts
+[0.792s] writing list of installed files to '/home/alonso/Development/School/ros_dev/build/autonomous_robot_system_tests/install.log'
+[0.825s] Invoked command in '/home/alonso/Development/School/ros_dev/src/autonomous_robot/autonomous_robot_system_tests' returned '0': CONDA_PROMPT_MODIFIER=(base) DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/alonso/Development/School/ros_dev/build/autonomous_robot_system_tests/prefix_override:/home/alonso/.local/share/mise/installs/python/3.12.11/lib/python3.12/site-packages/colcon_core/task/python/colcon_distutils_commands:/home/alonso/Development/School/ros_dev/install/autonomous_robot_system_tests/lib/python3.12/site-packages:${PYTHONPATH} /home/alonso/.local/share/mise/installs/python/3.12.11/bin/python3.12 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/autonomous_robot_system_tests build --build-base /home/alonso/Development/School/ros_dev/build/autonomous_robot_system_tests/build install --record /home/alonso/Development/School/ros_dev/build/autonomous_robot_system_tests/install.log --single-version-externally-managed install_data
