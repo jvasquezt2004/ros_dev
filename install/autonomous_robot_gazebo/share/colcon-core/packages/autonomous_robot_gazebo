@@ -1,1 +1,0 @@
-autonomous_robot_bringup:controller_manager:gz_ros2_control:gz_ros2_control_demos:rclpy:ros2_control:ros2_controllers:ros_gz:ros_gz_bridge:ros_gz_image:ros_gz_sim:rqt_robot_steering:rviz_imu_plugin:teleop_twist_keyboard:trajectory_msgs:xacro

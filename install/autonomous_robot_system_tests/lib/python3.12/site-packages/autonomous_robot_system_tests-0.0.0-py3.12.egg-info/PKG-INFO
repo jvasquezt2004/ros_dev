@@ -1,9 +1,0 @@
-Metadata-Version: 2.1
-Name: autonomous-robot-system-tests
-Version: 0.0.0
-Summary: TODO: Package description
-Maintainer: alonso
-Maintainer-email: jorgealonsovasquez@hotmail.com
-License: BSD-3-Clause
-Provides-Extra: test
-License-File: LICENSE
