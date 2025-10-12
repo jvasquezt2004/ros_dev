@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/alonso/Development/School/ros_dev/src/autonomous_robot/autonomous_robot_description
+CMAKE_SOURCE_DIR = /home/alonso/Dev/ros_dev/src/autonomous_robot/autonomous_robot_description
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/alonso/Development/School/ros_dev/build/autonomous_robot_description
+CMAKE_BINARY_DIR = /home/alonso/Dev/ros_dev/build/autonomous_robot_description
 
 # Utility rule file for uninstall.
 
@@ -78,6 +78,6 @@ CMakeFiles/uninstall.dir/clean:
 .PHONY : CMakeFiles/uninstall.dir/clean
 
 CMakeFiles/uninstall.dir/depend:
-	cd /home/alonso/Development/School/ros_dev/build/autonomous_robot_description && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/alonso/Development/School/ros_dev/src/autonomous_robot/autonomous_robot_description /home/alonso/Development/School/ros_dev/src/autonomous_robot/autonomous_robot_description /home/alonso/Development/School/ros_dev/build/autonomous_robot_description /home/alonso/Development/School/ros_dev/build/autonomous_robot_description /home/alonso/Development/School/ros_dev/build/autonomous_robot_description/CMakeFiles/uninstall.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/alonso/Dev/ros_dev/build/autonomous_robot_description && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/alonso/Dev/ros_dev/src/autonomous_robot/autonomous_robot_description /home/alonso/Dev/ros_dev/src/autonomous_robot/autonomous_robot_description /home/alonso/Dev/ros_dev/build/autonomous_robot_description /home/alonso/Dev/ros_dev/build/autonomous_robot_description /home/alonso/Dev/ros_dev/build/autonomous_robot_description/CMakeFiles/uninstall.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/uninstall.dir/depend
 

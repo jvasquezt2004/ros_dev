@@ -1,0 +1,6 @@
+Panels: [ {Class: rviz_common/Displays, Name: Displays} ]
+Visualization Manager:
+  Displays:
+    - {Class: rviz_default_plugins/Grid, Name: Grid}
+    - {Class: rviz_default_plugins/LaserScan, Name: LidarScan, Enabled: true, Topic: /scan, Size (m): 0.02}
+  Global Options: {Fixed Frame: base_link}

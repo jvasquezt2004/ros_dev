@@ -1,4 +1,4 @@
 import sys
-if sys.prefix == '/home/alonso/.local/share/mise/installs/python/3.12.11':
+if sys.prefix == '/usr':
     sys.real_prefix = sys.prefix
-    sys.prefix = sys.exec_prefix = '/home/alonso/Development/School/ros_dev/install/autonomous_robot_system_tests'
+    sys.prefix = sys.exec_prefix = '/home/alonso/Dev/ros_dev/install/autonomous_robot_system_tests'

@@ -13,9 +13,16 @@ description/lidar.xacro
 description/robot.urdf.xacro
 description/robot_main.xacro
 launch/display.launch.py
+launch/sim_lidar.launch.py
+launch/sim_spawn_robot.launch.py
+launch/sim_world.launch.py
+launch/sim_world_robot.launch.py
 minibot/__init__.py
 resource/minibot
 rviz/display.rviz
+rviz/sim_lidar.rviz
+rviz/sim_lidar_min.rviz
 test/test_copyright.py
 test/test_flake8.py
 test/test_pep257.py
+worlds/playground.sdf
