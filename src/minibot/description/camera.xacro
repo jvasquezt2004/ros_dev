@@ -35,45 +35,24 @@
     <!-- Camera in gazebo-->
     <gazebo reference="camera_link">
         <sensor name="camera" type="camera">
-
-            <gz_frame_id>camera_link_optical</gz_frame_id>
-            <pose>0 0 0 0 0 0</pose>
-            <topic>camera/image_raw</topic>
+            <always_on>true</always_on>
             <update_rate>30</update_rate>
-            <always_on>1</always_on>
             <visualize>true</visualize>
-
             <camera>
-                <horizontal_fov>1.089</horizontal_fov>
-                <image>
-                    <format>R8G8B8</format>
-                    <width>640</width>
-                    <height>480</height>
-                </image>
-                <clip>
-                    <near>0.05</near>
-                    <far>8.0</far>
-                </clip>
-                <!-- <distortion>
-                    <k1>1.578758331993112829e-01</k1>
-                    <k2>-5.784303605943902360e-01</k2>
-                    <k3>-8.740723680089258069e-03</k3>
-                    <p1>1.359451618091441112e-03</p1>
-                    <p2>1.640043376158566713e-01</p2>
-                    <center>0.5 0.5</center>
-                </distortion>
-                <lens>
-                    <type>pinhole</type>
-                    <scale_to_hfov>false</scale_to_hfov>
-                    <intrinsics>
-                    <fx>4.970870507466349295e+02</fx>
-                    <fy>4.976011127668800782e+02</fy>
-                    <cx>3.168387473166100108e+02</cx>
-                    <cy>2.342740555042151982e+02</cy>
-                    <s>0.0</s>
-                    </intrinsics>
-                </lens> -->
+            <horizontal_fov>1.047</horizontal_fov>
+            <image>
+                <width>640</width>
+                <height>480</height>
+                <format>R8G8B8</format>
+            </image>
+            <clip>
+                <near>0.1</near>
+                <far>100</far>
+            </clip>
             </camera>
+
+            <!-- Gazebo Sim system plugin, NOT gazebo_ros -->
+            <plugin name="gz::sim::systems::Camera" filename="libgz-sim-camera-system.so"/>
         </sensor>
     </gazebo>
 </robot>

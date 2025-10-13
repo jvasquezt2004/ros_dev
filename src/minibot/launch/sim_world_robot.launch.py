@@ -11,6 +11,7 @@ from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import LaunchConfiguration
 from launch.conditions import IfCondition
 from launch_ros.actions import Node
+from launch.actions import TimerAction
 
 
 def pkg_share(pkg: str) -> str:
@@ -101,6 +102,17 @@ def generate_launch_description():
         condition=IfCondition(use_lidar),
     )
 
+    include_camera = TimerAction(
+        period=5.0,  # Wait 5 seconds before launching the camera bridge
+        actions=[
+            IncludeLaunchDescription(
+                PythonLaunchDescriptionSource(
+                    os.path.join(pkg_share('minibot'), 'launch', 'bridge_camera.launch.py')
+                ),
+            )
+        ],
+    )
+
     # ----------------
     # RViz2 (opcional)
     # ----------------
@@ -136,5 +148,6 @@ def generate_launch_description():
         include_world,
         include_spawn,
         include_lidar,
+        include_camera,
         rviz,
     ])
