@@ -1,0 +1,58 @@
+Panels:
+  - Class: rviz_common/Displays
+    Name: Displays
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Class: rviz_default_plugins/Grid
+      Name: Grid
+      Enabled: true
+      Cell Size: 1
+      Plane: XY
+    - Class: rviz_default_plugins/TF
+      Name: TF
+      Enabled: true
+    - Class: rviz_default_plugins/RobotModel
+      Name: Robot
+      Enabled: true
+    - Class: rviz_default_plugins/LaserScan
+      Name: LidarScan
+      Enabled: true
+      Topic:
+        Value: /scan
+      Style: Points
+      Size (m): 0.03
+      Queue Size: 10
+      Reliability Policy: Best Effort
+      History Policy: Keep Last
+      History Depth: 10
+    - Class: rviz_default_plugins/PointCloud2
+      Name: LidarPoints
+      Enabled: true
+      Topic:
+        Value: /scan/points
+      Autocompute Intensity Bounds: true
+      Queue Size: 10
+      Reliability Policy: Best Effort
+      History Policy: Keep Last
+      History Depth: 10
+    - Class: rviz_default_plugins/Image
+      Name: CameraImage
+      Enabled: true
+      Image Topic:
+        Value: /camera/image_raw
+      Normalize Range: true
+      Queue Size: 10
+      Reliability Policy: Best Effort
+      History Policy: Keep Last
+      History Depth: 10
+  Global Options:
+    Fixed Frame: base_link
+  Tools:
+    - Class: rviz_default_plugins/Interact
+    - Class: rviz_default_plugins/MoveCamera
+    - Class: rviz_default_plugins/Select
+    - Class: rviz_default_plugins/Measure
+Window Geometry:
+  Width: 1200
+  Height: 800

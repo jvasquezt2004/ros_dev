@@ -22,7 +22,7 @@ def generate_launch_description():
     # Launch arguments
     # ----------------
     world_default = os.path.join(pkg_share('minibot'), 'worlds', 'playground.sdf')
-    rviz_default  = os.path.join(pkg_share('minibot'), 'rviz', 'sim_lidar.rviz')
+    rviz_default  = os.path.join(pkg_share('minibot'), 'rviz', 'sim_lidar_camera.rviz')
     xacro_default = os.path.join(pkg_share('minibot'), 'description', 'robot.urdf.xacro')
 
     declare_headless   = DeclareLaunchArgument('headless',     default_value='false')
@@ -38,6 +38,7 @@ def generate_launch_description():
     declare_use_lidar  = DeclareLaunchArgument('use_lidar',    default_value='true')
     declare_use_rviz   = DeclareLaunchArgument('use_rviz',     default_value='true')
     declare_rviz_cfg   = DeclareLaunchArgument('rviz_config',  default_value=rviz_default)
+    declare_use_camera = DeclareLaunchArgument('use_camera', default_value='true')
 
     headless   = LaunchConfiguration('headless')
     verbosity  = LaunchConfiguration('verbosity')
@@ -51,6 +52,7 @@ def generate_launch_description():
     use_lidar  = LaunchConfiguration('use_lidar')
     use_rviz   = LaunchConfiguration('use_rviz')
     rviz_cfg   = LaunchConfiguration('rviz_config')
+    use_camera = LaunchConfiguration('use_camera')
 
     # ----------------
     # Environment fixes (Wayland/Hyprland + OGRE)
@@ -101,6 +103,13 @@ def generate_launch_description():
         condition=IfCondition(use_lidar),
     )
 
+    include_camera = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(
+            os.path.join(pkg_share('minibot'), 'launch', 'sim_camera.launch.py')
+        ),
+        condition=IfCondition(use_camera),
+    )
+
     # ----------------
     # RViz2 (opcional)
     # ----------------
@@ -130,11 +139,13 @@ def generate_launch_description():
         declare_world, declare_verbosity, declare_headless,
         declare_name, declare_x, declare_y, declare_z, declare_yaw,
         declare_xacro, declare_use_lidar, declare_use_rviz, declare_rviz_cfg,
+        declare_use_camera,
         # Env saneado
         force_xcb, clear_qt_style, clear_mesa_gl, clear_mesa_glsl, ogre_rtt_copy,
         # Bringup
         include_world,
         include_spawn,
         include_lidar,
+        include_camera,
         rviz,
     ])
