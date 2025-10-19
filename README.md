@@ -35,6 +35,50 @@ El proyecto incluye descripciones URDF/Xacro completas, integración con Gazebo,
   - `rviz/`: Configuraciones predefinidas de RViz2:
     - `display.rviz`: Configuración optimizada para visualización del minibot.
 
+### Archivos de Lanzamiento del Minibot
+
+El paquete `minibot` incluye un conjunto de archivos de lanzamiento modulares para visualización y simulación.
+
+- **`display.launch.py`**:
+  - **Propósito**: Visualizar el modelo del robot en RViz2 sin necesidad de una simulación.
+  - **Nodos que lanza**:
+    - `robot_state_publisher`: Procesa el archivo XACRO, genera el URDF y publica las transformaciones (TF2) del robot.
+    - `joint_state_publisher_gui`: Proporciona una interfaz gráfica con sliders para mover manualmente las articulaciones del robot, ideal para pruebas.
+    - `rviz2`: Inicia la herramienta de visualización con una configuración predefinida.
+  - **Uso**: `ros2 launch minibot display.launch.py`
+
+- **`sim_world.launch.py`**:
+  - **Propósito**: Lanza un mundo vacío o predefinido en Gazebo.
+  - **Argumentos clave**:
+    - `world`: Ruta al archivo de mundo `.sdf`. Por defecto, `worlds/playground.sdf`.
+    - `headless`: Si es `true`, lanza solo el servidor de Gazebo (sin GUI), útil para ejecuciones automatizadas.
+  - **Funcionamiento**: Incluye el lanzador `gz_sim.launch.py` del paquete `ros_gz_sim`.
+
+- **`sim_spawn_robot.launch.py`**:
+  - **Propósito**: Carga el modelo del robot y lo inserta en una simulación de Gazebo activa.
+  - **Argumentos clave**:
+    - `name`: Nombre del robot en la simulación.
+    - `x`, `y`, `z`, `yaw`: Posición y orientación iniciales del robot.
+    - `xacro_path`: Ruta al archivo XACRO principal del robot.
+  - **Funcionamiento**:
+    1.  Ejecuta `xacro` para procesar el URDF y lo carga en el parámetro `robot_description`.
+    2.  Lanza `robot_state_publisher` para publicar las transformaciones del robot en la simulación.
+    3.  Usa el ejecutable `create` de `ros_gz_sim` para insertar el modelo en Gazebo usando el tópico `robot_description`.
+
+- **`sim_lidar.launch.py`**:
+  - **Propósito**: Conecta los datos del sensor Lidar de Gazebo con ROS 2.
+  - **Funcionamiento**: Lanza un `parameter_bridge` de `ros_gz_bridge` que traduce los mensajes del Lidar del simulador (`gz.msgs.LaserScan`) a tópicos estándar de ROS 2 (`sensor_msgs/msg/LaserScan` y `sensor_msgs/msg/PointCloud2`).
+  - **Argumentos**: `laser_topic` y `points_topic` para configurar los nombres de los tópicos en ROS 2.
+
+- **`sim_world_robot.launch.py`**:
+  - **Propósito**: Lanzador principal "todo en uno" para una simulación completa.
+  - **Funcionamiento**: Orquesta y combina los lanzadores anteriores.
+    1.  Incluye `sim_world.launch.py` para cargar el entorno de simulación.
+    2.  Incluye `sim_spawn_robot.launch.py` para añadir el robot al mundo.
+    3.  Incluye `sim_lidar.launch.py` (si `use_lidar` es `true`) para activar el sensor.
+    4.  Opcionalmente, lanza `rviz2` (si `use_rviz` es `true`) con una configuración adaptada a la simulación.
+  - **Uso principal para simulación**: `ros2 launch minibot sim_world_robot.launch.py`
+
 ### Paquetes auxiliares
 - `ros2_fundamentals_examples/`: Ejercicios de publicación/suscripción en Python y C++ (no usados en el proyecto final).
 
