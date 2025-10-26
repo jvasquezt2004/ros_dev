@@ -38,9 +38,9 @@
 
             <gz_frame_id>camera_link_optical</gz_frame_id>
             <pose>0 0 0 0 0 0</pose>
-            <topic>camera/image_raw</topic>
+            <topic>/camera/image_raw</topic>
             <update_rate>30</update_rate>
-            <always_on>1</always_on>
+            <always_on>true</always_on>
             <visualize>true</visualize>
 
             <camera>
