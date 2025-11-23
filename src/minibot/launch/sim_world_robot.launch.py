@@ -36,9 +36,10 @@ def generate_launch_description():
     declare_xacro      = DeclareLaunchArgument('xacro',        default_value=xacro_default)
 
     declare_use_lidar  = DeclareLaunchArgument('use_lidar',    default_value='true')
-    declare_use_rviz   = DeclareLaunchArgument('use_rviz',     default_value='true')
+    declare_use_rviz   = DeclareLaunchArgument('use_rviz', default_value='false')
     declare_rviz_cfg   = DeclareLaunchArgument('rviz_config',  default_value=rviz_default)
     declare_use_camera = DeclareLaunchArgument('use_camera', default_value='true')
+    declare_use_slam = DeclareLaunchArgument('use_slam', default_value='false')
 
     headless   = LaunchConfiguration('headless')
     verbosity  = LaunchConfiguration('verbosity')
@@ -53,6 +54,7 @@ def generate_launch_description():
     use_rviz   = LaunchConfiguration('use_rviz')
     rviz_cfg   = LaunchConfiguration('rviz_config')
     use_camera = LaunchConfiguration('use_camera')
+    use_slam = LaunchConfiguration('use_slam')
 
     # ----------------
     # Environment fixes (Wayland/Hyprland + OGRE)
@@ -60,8 +62,8 @@ def generate_launch_description():
     # Forzar backend XCB (XWayland) para Qt, limpiar estilos y overrides de Mesa
     force_xcb       = SetEnvironmentVariable('QT_QPA_PLATFORM', 'xcb')
     clear_qt_style  = SetEnvironmentVariable('QT_STYLE_OVERRIDE', '')
-    clear_mesa_gl   = SetEnvironmentVariable('MESA_GL_VERSION_OVERRIDE', '')
-    clear_mesa_glsl = SetEnvironmentVariable('MESA_GLSL_VERSION_OVERRIDE', '')
+    #clear_mesa_gl   = SetEnvironmentVariable('MESA_GL_VERSION_OVERRIDE', '')
+    #clear_mesa_glsl = SetEnvironmentVariable('MESA_GLSL_VERSION_OVERRIDE', '')
     # Workaround de RViz/OGRE cuando mueves la ventana entre escritorios
     ogre_rtt_copy   = SetEnvironmentVariable('OGRE_RTT_MODE', 'Copy')
 
@@ -110,6 +112,21 @@ def generate_launch_description():
         condition=IfCondition(use_camera),
     )
 
+    include_slam = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(
+            os.path.join(pkg_share('minibot'), 'launch', 'sim_slam.launch.py')
+        ),
+        condition=IfCondition(use_slam),
+        launch_arguments={'use_sim_time': 'true'}.items(), # Importante para simulación
+    )
+
+    include_control = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(
+            os.path.join(pkg_share('minibot'), 'launch', 'sim_control.launch.py')
+        ),
+        condition=IfCondition('true'), # Siempre activo para que haya odometría
+    )
+
     # ----------------
     # RViz2 (opcional)
     # ----------------
@@ -139,13 +156,17 @@ def generate_launch_description():
         declare_world, declare_verbosity, declare_headless,
         declare_name, declare_x, declare_y, declare_z, declare_yaw,
         declare_xacro, declare_use_lidar, declare_use_rviz, declare_rviz_cfg,
-        declare_use_camera,
+        declare_use_camera, declare_use_slam,
         # Env saneado
-        force_xcb, clear_qt_style, clear_mesa_gl, clear_mesa_glsl, ogre_rtt_copy,
+        force_xcb, clear_qt_style, 
+        #clear_mesa_gl, clear_mesa_glsl, 
+        ogre_rtt_copy,
         # Bringup
         include_world,
         include_spawn,
         include_lidar,
         include_camera,
+        include_slam,
+        include_control,
         rviz,
     ])

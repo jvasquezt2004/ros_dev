@@ -71,7 +71,7 @@ def generate_launch_description():
     )
 
     # Evita “no such service /world/.../create” si el server tarda en levantar
-    delayed_spawn = TimerAction(period=2.0, actions=[spawn])
+    delayed_spawn = TimerAction(period=5.0, actions=[spawn])
 
     # ---------- Recursos para Gazebo ----------
     set_res_path = SetEnvironmentVariable(
