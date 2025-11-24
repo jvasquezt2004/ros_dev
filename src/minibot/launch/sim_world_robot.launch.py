@@ -141,8 +141,8 @@ def generate_launch_description():
         additional_env={
             'QT_QPA_PLATFORM': 'xcb',
             'QT_STYLE_OVERRIDE': '',
-            'MESA_GL_VERSION_OVERRIDE': '',
-            'MESA_GLSL_VERSION_OVERRIDE': '',
+            # 'MESA_GL_VERSION_OVERRIDE': '',
+            # 'MESA_GLSL_VERSION_OVERRIDE': '',
             'OGRE_RTT_MODE': 'Copy',
             # Si te interesa forzar software GL solo para RViz:
             # 'LIBGL_ALWAYS_SOFTWARE': '1',
