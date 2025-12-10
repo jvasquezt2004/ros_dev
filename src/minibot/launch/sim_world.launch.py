@@ -9,7 +9,7 @@ from launch.substitutions import LaunchConfiguration
 
 def generate_launch_description():
     pkg_share = get_package_share_directory('minibot')
-    default_world = os.path.join(pkg_share, 'worlds', 'playground.sdf')
+    default_world = os.path.join(pkg_share, 'worlds', 'circuit.sdf')
 
     world = LaunchConfiguration('world')
     verbosity = LaunchConfiguration('verbosity')

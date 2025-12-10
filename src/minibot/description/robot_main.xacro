@@ -3,32 +3,26 @@
 
     <xacro:include filename="inertial_macros.xacro"/>
 
-    <!-- Dimensiones del chasis -->
     <xacro:property name="chassis_length"  value="0.320"/>
     <xacro:property name="chassis_width"   value="0.240"/>
     <xacro:property name="chassis_height"  value="0.078"/>
     <xacro:property name="chassis_mass"    value="0.700"/>
 
-    <!-- Ruedas -->
     <xacro:property name="wheel_radius"    value="0.034"/>
     <xacro:property name="wheel_thickness" value="0.026"/>
     <xacro:property name="wheel_mass"      value="0.050"/>
 
-    <!-- Geometría: vía y altura de rueda (se mantiene la que traías) -->
-    <xacro:property name="wheel_offset_y"  value="0.133"/>  <!-- mitad del ancho de vía -->
+    <xacro:property name="wheel_offset_y"  value="0.133"/>
     <xacro:property name="wheel_offset_z"  value="0.020"/>
 
-    <!-- Nueva distancia entre ejes (Ackermann) -->
-    <xacro:property name="wheelbase"       value="${chassis_length}"/><!-- eje trasero en x=0, eje delantero en x=0.20 -->
+    <xacro:property name="wheelbase"       value="${chassis_length}"/>
 
-    <!-- Materiales -->
     <material name="white"><color rgba="1 1 1 1"/></material>
     <material name="black"><color rgba="0 0 0 1"/></material>
     <material name="orange"><color rgba="1 0.25 0 1"/></material>
     <material name="cyan"><color rgba="0 1 1 1"/></material>
     <material name="indigo"><color rgba="0.294 0 0.51 1"/></material>
 
-    <!-- base_link y base_footprint -->
     <link name="base_link"/>
     <joint name="base_footprint_joint" type="fixed">
         <parent link="base_link"/>
@@ -37,14 +31,11 @@
     </joint>
     <link name="base_footprint"/>
 
-    <!-- Chasis (coincide con tu convención de nombre 'chasis') -->
-    <!-- Lo ubicamos igual que antes: su centro queda en (chassis_length/2, 0, chassis_height/2) -->
     <joint name="chasis_joint" type="fixed">
         <parent link="base_link"/>
         <child link="chasis"/>
         <origin xyz="0 0 ${-wheel_offset_z}"/>
     </joint>
-
 
     <link name="chasis">
         <visual>
@@ -65,13 +56,7 @@
             <origin xyz="${chassis_length/2} 0 ${chassis_height/2}"/>
         </xacro:inertial_box>
     </link>
-
-    <gazebo reference="chasis">
-        <material>Gazebo/Black</material>
-    </gazebo>
-
-    <!-- ======================= EJE TRASERO (x = 0) ======================= -->
-
+    
     <joint name="rear_left_wheel_joint" type="continuous">
         <parent link="base_link"/>
         <child  link="rear_left_wheel"/>
@@ -94,10 +79,6 @@
             <origin xyz="0 0 0"/>
         </xacro:inertial_cylinder>
     </link>
-    <gazebo reference="rear_left_wheel">
-        <material>Gazebo/Orange</material>
-    </gazebo>
-
     <joint name="rear_right_wheel_joint" type="continuous">
         <parent link="base_link"/>
         <child  link="rear_right_wheel"/>
@@ -120,12 +101,6 @@
             <origin xyz="0 0 0"/>
         </xacro:inertial_cylinder>
     </link>
-    <gazebo reference="rear_right_wheel">
-        <material>Gazebo/Orange</material>
-    </gazebo>
-
-    <!-- ======================= EJE DELANTERO (x = wheelbase) ======================= -->
-    <!-- Articulación de dirección (mangueta) izquierda -->
     <joint name="front_left_steer_joint" type="revolute">
         <parent link="base_link"/>
         <child  link="front_left_steer"/>
@@ -146,7 +121,6 @@
         </xacro:inertial_sphere>
     </link>
 
-    <!-- Rueda delantera izquierda bajo la mangueta -->
     <joint name="front_left_wheel_joint" type="continuous">
         <parent link="front_left_steer"/>
         <child  link="front_left_wheel"/>
@@ -169,11 +143,6 @@
             <origin xyz="0 0 0"/>
         </xacro:inertial_cylinder>
     </link>
-    <gazebo reference="front_left_wheel">
-        <material>Gazebo/Orange</material>
-    </gazebo>
-
-    <!-- Articulación de dirección (mangueta) derecha -->
     <joint name="front_right_steer_joint" type="revolute">
         <parent link="base_link"/>
         <child  link="front_right_steer"/>
@@ -194,7 +163,6 @@
         </xacro:inertial_sphere>
     </link>
 
-    <!-- Rueda delantera derecha bajo la mangueta -->
     <joint name="front_right_wheel_joint" type="continuous">
         <parent link="front_right_steer"/>
         <child  link="front_right_wheel"/>
@@ -217,10 +185,6 @@
             <origin xyz="0 0 0"/>
         </xacro:inertial_cylinder>
     </link>
-    <gazebo reference="front_right_wheel">
-        <material>Gazebo/Orange</material>
-    </gazebo>
-
     <gazebo>
         <plugin filename="gz-sim-ackermann-steering-system" name="gz::sim::systems::AckermannSteering">
             <left_joint>rear_left_wheel_joint</left_joint>
@@ -236,11 +200,13 @@
             <max_velocity>10</max_velocity>
             <min_acceleration>-3</min_acceleration>
             <max_acceleration>3</max_acceleration>
-            <topic>/cmd_vel</topic> </plugin>
+            <topic>/cmd_vel</topic>
+        </plugin>
 
         <plugin filename="gz-sim-odometry-publisher-system" name="gz::sim::systems::OdometryPublisher">
             <odom_frame>odom</odom_frame>
-            <robot_base_frame>base_link</robot_base_frame> <odom_publish_frequency>50</odom_publish_frequency>
+            <robot_base_frame>base_link</robot_base_frame>
+            <odom_publish_frequency>50</odom_publish_frequency>
             <topic>/odom</topic>
             <tf_topic>/tf</tf_topic>
             <xyz_offset>0 0 0</xyz_offset>

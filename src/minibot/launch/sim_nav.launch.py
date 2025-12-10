@@ -15,7 +15,7 @@ def generate_launch_description():
     pkg_nav2 = get_package_share_directory('nav2_bringup')
 
     # 2. Valores por defecto
-    default_map = os.path.join(os.path.expanduser('~'), 'mi_mapa.yaml')
+    default_map = os.path.join(os.path.expanduser('~'), 'pasillos_mapa.yaml')
     default_params_file = os.path.join(pkg_minibot, 'config', 'nav2_params.yaml')
     nav2_launch_file = os.path.join(pkg_nav2, 'launch', 'bringup_launch.py')
 

@@ -4,11 +4,9 @@
     <xacro:property name="lidar_radius"             value="0.025"/>
     <xacro:property name="lidar_thickness"          value="0.040"/>
 
-    <!-- Centrado en X respecto al link 'chasis' -->
     <xacro:property name="lidar_offset_x"           value="${chassis_length/2}"/>
     <xacro:property name="lidar_offset_z"           value="0.098"/>
 
-    <!-- Lidar -->
     <joint name="lidar_joint" type="fixed">
         <parent link="chasis"/>
         <child link="lidar_frame"/>
@@ -32,7 +30,6 @@
         </xacro:inertial_cylinder>
     </link>
 
-    <!-- Lidar in gazebo-->
     <gazebo reference="lidar_frame">
         <sensor name="lidar" type="gpu_lidar">
             <gz_frame_id>lidar_frame</gz_frame_id>
@@ -68,10 +65,7 @@
                     <stddev>0.01</stddev>
                 </noise>
             </lidar>
-
-            <plugin filename="gz-sim-sensors-system" name="gz::sim::systems::Sensors">
-                <render_engine>ogre2</render_engine>
-            </plugin>
-        </sensor>
+            
+            </sensor>
     </gazebo>
 </robot>

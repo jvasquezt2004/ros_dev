@@ -21,7 +21,7 @@ def generate_launch_description():
     # ----------------
     # Launch arguments
     # ----------------
-    world_default = os.path.join(pkg_share('minibot'), 'worlds', 'playground.sdf')
+    world_default = os.path.join(pkg_share('minibot'), 'worlds', 'circuit.sdf')
     rviz_default  = os.path.join(pkg_share('minibot'), 'rviz', 'sim_lidar_camera.rviz')
     xacro_default = os.path.join(pkg_share('minibot'), 'description', 'robot.urdf.xacro')
 
@@ -29,9 +29,9 @@ def generate_launch_description():
     declare_verbosity  = DeclareLaunchArgument('verbosity',    default_value='4')
     declare_world      = DeclareLaunchArgument('world',        default_value=world_default)
     declare_name       = DeclareLaunchArgument('name',         default_value='minibot')
-    declare_x          = DeclareLaunchArgument('x',            default_value='0.0')
-    declare_y          = DeclareLaunchArgument('y',            default_value='0.0')
-    declare_z          = DeclareLaunchArgument('z',            default_value='0.1')
+    declare_x          = DeclareLaunchArgument('x',            default_value='-8.0')
+    declare_y          = DeclareLaunchArgument('y',            default_value='-8.0')
+    declare_z          = DeclareLaunchArgument('z',            default_value='0.3')
     declare_yaw        = DeclareLaunchArgument('yaw',          default_value='0.0')
     declare_xacro      = DeclareLaunchArgument('xacro',        default_value=xacro_default)
 

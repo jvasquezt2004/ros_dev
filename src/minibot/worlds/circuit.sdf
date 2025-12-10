@@ -1,0 +1,164 @@
+<?xml version="1.0" ?>
+<sdf version="1.8">
+  <world name="circuito_autonomo">
+
+    <plugin
+      filename="gz-sim-physics-system"
+      name="gz::sim::systems::Physics">
+    </plugin>
+    <plugin
+      filename="gz-sim-user-commands-system"
+      name="gz::sim::systems::UserCommands">
+    </plugin>
+    <plugin
+      filename="gz-sim-scene-broadcaster-system"
+      name="gz::sim::systems::SceneBroadcaster">
+    </plugin>
+    <plugin
+      filename="gz-sim-sensors-system"
+      name="gz::sim::systems::Sensors">
+      <render_engine>ogre2</render_engine>
+    </plugin>
+
+    <light type="directional" name="sun">
+      <cast_shadows>true</cast_shadows>
+      <pose>0 0 10 0 0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.5 0.1 -0.9</direction>
+    </light>
+
+    <gui>
+      <camera name="user_camera">
+        <pose>0 0 30 0 1.57 0</pose> </camera>
+    </gui>
+
+    <model name="suelo_oscuro">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size> </plane>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <ambient>0.2 0.2 0.2 1</ambient>
+            <diffuse>0.2 0.2 0.2 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="pared_norte">
+      <pose>0 10 1 0 0 0</pose> <static>true</static>
+      <link name="link">
+        <collision name="c"><geometry><box><size>20 0.5 2</size></box></geometry></collision>
+        <visual name="v">
+          <geometry><box><size>20 0.5 2</size></box></geometry>
+          <material><diffuse>0.6 0.3 0.2 1</diffuse></material> </visual>
+      </link>
+    </model>
+
+    <model name="pared_sur">
+      <pose>0 -10 1 0 0 0</pose> <static>true</static>
+      <link name="link">
+        <collision name="c"><geometry><box><size>20 0.5 2</size></box></geometry></collision>
+        <visual name="v">
+          <geometry><box><size>20 0.5 2</size></box></geometry>
+          <material><diffuse>0.6 0.3 0.2 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="pared_este">
+      <pose>10 0 1 0 0 0</pose> <static>true</static>
+      <link name="link">
+        <collision name="c"><geometry><box><size>0.5 20 2</size></box></geometry></collision>
+        <visual name="v">
+          <geometry><box><size>0.5 20 2</size></box></geometry> <material><diffuse>0.6 0.3 0.2 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="pared_oeste">
+      <pose>-10 0 1 0 0 0</pose> <static>true</static>
+      <link name="link">
+        <collision name="c"><geometry><box><size>0.5 20 2</size></box></geometry></collision>
+        <visual name="v">
+          <geometry><box><size>0.5 20 2</size></box></geometry>
+          <material><diffuse>0.6 0.3 0.2 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="muro_central">
+      <pose>0 0 1 0 0 0</pose>
+      <static>true</static>
+      <link name="link">
+        <visual name="v">
+          <geometry><box><size>12 2 2</size></box></geometry> <material><diffuse>1 1 1 1</diffuse></material>
+        </visual>
+        <collision name="c"><geometry><box><size>12 2 2</size></box></geometry></collision>
+      </link>
+    </model>
+
+    <model name="muro_t">
+      <pose>5 4 1 0 0 0</pose>
+      <static>true</static>
+      <link name="link">
+        <visual name="v">
+          <geometry><box><size>2 6 2</size></box></geometry> <material><diffuse>1 1 1 1</diffuse></material>
+        </visual>
+        <collision name="c"><geometry><box><size>2 6 2</size></box></geometry></collision>
+      </link>
+    </model>
+
+    <model name="muro_esquina">
+      <pose>-5 -4 1 0 0 0</pose>
+      <static>true</static>
+      <link name="link">
+        <visual name="v">
+          <geometry><box><size>2 6 2</size></box></geometry> <material><diffuse>1 1 1 1</diffuse></material>
+        </visual>
+        <collision name="c"><geometry><box><size>2 6 2</size></box></geometry></collision>
+      </link>
+    </model>
+
+    <model name="obstaculo_1">
+      <pose>8 -8 0.5 0 0 0</pose>
+      <static>true</static>
+      <link name="link">
+        <visual name="v">
+          <geometry><cylinder><radius>0.3</radius><length>1</length></cylinder></geometry> <material><diffuse>1 0 0 1</diffuse></material> </visual>
+        <collision name="c"><geometry><cylinder><radius>0.3</radius><length>1</length></cylinder></geometry></collision>
+      </link>
+    </model>
+
+    <model name="obstaculo_2">
+      <pose>-8 8 0.5 0 0 0</pose>
+      <static>true</static>
+      <link name="link">
+        <visual name="v">
+          <geometry><cylinder><radius>0.3</radius><length>1</length></cylinder></geometry> <material><diffuse>1 0 0 1</diffuse></material> </visual>
+        <collision name="c"><geometry><cylinder><radius>0.3</radius><length>1</length></cylinder></geometry></collision>
+      </link>
+    </model>
+
+  </world>
+</sdf>
