@@ -2,7 +2,7 @@
 
 Minibot es un robot movil de configuracion ackermman simulado en gazebo utilizando el stack de navegacion Nav2.
 
-## ⚙️ Especificaciones Técnicas
+## Especificaciones Técnicas
 
 ### 1. Cinemática y Físicas (`robot_main.xacro`)
 El robot utiliza el plugin `gz-sim-ackermann-steering-system` para la simulación física.
@@ -27,7 +27,7 @@ El robot utiliza el plugin `gz-sim-ackermann-steering-system` para la simulació
     * Resolución: 640x480.
     * FOV Horizontal: ~1.09 rad.
 
-## 🗺️ Flujo de Trabajo: Mapeo y Navegación
+## Flujo de Trabajo: Mapeo y Navegación
 
 El uso del robot se divide en dos fases: primero generar el mapa (SLAM) y luego usar ese mapa para navegar de forma autónoma (Nav2).
 
