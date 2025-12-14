@@ -1,10 +1,17 @@
-# Paquete minibot
+<div align="center">
 
-Minibot es un robot movil de configuracion ackermman simulado en gazebo utilizando el stack de navegacion Nav2.
+[![ES](https://img.shields.io/badge/Lang-ES-red)](README.md)
+[![EN](https://img.shields.io/badge/Lang-EN-blue)](README_en.md)
+
+</div>
+
+# Paquete Minibot
+
+Minibot es un robot móvil de configuración Ackermann simulado en Gazebo utilizando el stack de navegación Nav2.
 
 ## Especificaciones Técnicas
 
-### 1. Cinemática y Físicas (`robot_main.xacro`)
+### 1. Cinemática y Física (`robot_main.xacro`)
 El robot utiliza el plugin `gz-sim-ackermann-steering-system` para la simulación física.
 
 * **Tipo de Tracción:** Trasera (Ruedas `rear_left` y `rear_right`).
@@ -42,21 +49,24 @@ ros2 launch minibot sim_world_robot.launch.py \
   headless:=false
 ```
 
-Terminal 2: Control Manual Mueve el robot para explorar. Recuerda que al ser Ackermann, debes avanzar (i) o freba (k) mientras giras (u/o).
+**Terminal 2: Control Manual**
+Mueve el robot para explorar. Recuerda que al ser Ackermann, debes avanzar (`i`) o frenar (`k`) mientras giras (`u`/`o`).
 
 ```bash
 ros2 run teleop_twist_keyboard teleop_twist_keyboard \
   --ros-args -r cmd_vel:=/cmd_vel
 ```
 
-Una vez tengas el mapa completo, guárdalo usando el panel de "SlamToolbox" en RViz o mediante comandos de 
+Una vez tengas el mapa completo, guárdalo usando el panel de "SlamToolbox" en RViz o mediante comandos de:
+
 ```bash
-ros2 run nav2_map_server map_saver -f <nombre_del_mapa>
+ros2 run nav2_map_server map_saver_cli -f <nombre_del_mapa>
 ```
 
 ### Fase 2: Navegación Autónoma
 
-Terminal 1: Simulación Base Inicia solo el entorno y el robot.
+**Terminal 1: Simulación Base**
+Inicia solo el entorno y el robot.
 
 ```bash
 ros2 launch minibot sim_world_robot.launch.py \
@@ -65,29 +75,33 @@ ros2 launch minibot sim_world_robot.launch.py \
   headless:=false
 ```
 
-Terminal 2: Stack de Navegación Inicia Nav2 cargando el mapa. Asegúrate de cambiar la ruta del mapa en base a donde lo hayas guardado).
+**Terminal 2: Stack de Navegación**
+Inicia Nav2 cargando el mapa. (Asegúrate de cambiar la ruta del mapa en base a donde lo hayas guardado).
 
 ```bash
 ros2 launch minibot sim_nav.launch.py map:=ruta_mapa.yaml
 ```
 
-Terminal 3: Visualización Abre RViz con la configuración específica para visualizar y utilizar Nav2.
+**Terminal 3: Visualización**
+Abre RViz con la configuración específica para visualizar y utilizar Nav2.
 
 ```bash
 ros2 launch minibot visualize_nav.launch.py
 ```
 
-Dentro de la nueva ventana de Rviz aparecera el Tf del robot, selecciona 2D pose estimate y da click en el Td del robot (No debe ser muy preciso pero de preferencia en el centro del robot), posteriormente selecciona 2D Goal pose y selecciona donde quiere ir, veras que aparece una flecha verde, indicando hacia donde terminara mirando el robot una vez que llegue a la cola de la flecha.
+Dentro de la nueva ventana de RViz aparecerá el TF del robot. Selecciona **2D Pose Estimate** y haz clic en el TF del robot (no debe ser muy preciso, pero de preferencia en el centro del robot). Posteriormente, selecciona **2D Goal Pose** y selecciona donde quieres ir; verás que aparece una flecha verde, indicando hacia donde terminará mirando el robot una vez que llegue a la cola de la flecha.
 
 ![Ejemplo de la flecha en Nav2 y Rviz](images/Ejemplo_flecha_nav2.png)
 
 ## Estructura de archivos
-* **launch/sim_world_robot.launch.py**: Launcher maestro. Orquesta Gazebo, el robot y (opcionalmente) SLAM.
 
-* **launch/sim_nav.launch.p**y: Inicia el stack de Nav2 con RegulatedPurePursuitController.
+  * **launch/sim\_world\_robot.launch.py**: Launcher maestro. Orquesta Gazebo, el robot y (opcionalmente) SLAM.
 
-* **launch/visualize_nav.launch.py**: Abre RViz con una configuracino para poder utilizar Nav2
+  * **launch/sim\_nav.launch.py**: Inicia el stack de Nav2 con `RegulatedPurePursuitController`.
 
-* **config/minibot_slam_mapping.yaml**: Parámetros de SLAM Toolbox.
+  * **launch/visualize\_nav.launch.py**: Abre RViz con una configuración para poder utilizar Nav2.
 
-* **config/nav2_params.yaml**: Parámetros de navegación.
+  * **config/minibot\_slam\_mapping.yaml**: Parámetros de SLAM Toolbox.
+
+  * **config/nav2\_params.yaml**: Parámetros de navegación.
+

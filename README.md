@@ -10,23 +10,23 @@
 
 # ROS 2 Development Workspace: Minibot Project
 
-Este repositorio contiene un entorno de desarrollo para un robot autonomo con arquitectura ackermman utilizando **ROS2 Jazzy Jalisco** y **Gazebo Harmonic**.
+Este repositorio contiene un entorno de desarrollo para un robot autónomo con arquitectura Ackermann utilizando **ROS 2 Jazzy Jalisco** y **Gazebo Harmonic**.
 
-El proyecto es un robot ackermman simulado y en fisico con equipo Lidar y una Camara, configurado para navegacion autonoma por medio de Nav2 yMapeo con Slam Toolbox.
+El proyecto es un robot Ackermann simulado y en físico con equipo Lidar y una cámara, configurado para navegación autónoma por medio de Nav2 y mapeo con SLAM Toolbox.
 
 ## Estructura del proyecto
 
-* **src/minibot**: paquete principal. Contiene la descripcion del robot en URDF/Xacro, mundos de simulacion, configuraciones de Nav2/SLAM y archivos de lanzamiento para simulador y en robot fisico.
-* **src/ros_fundamentals_example**: paquete corto de fin educativo con ejemplos de Publishers y Suscribers escritos en C++ y Python.
-* **Dockerfile** configuracion para utilizar un contenedor de Docker en todo el entorno de desarrollo.
+* **src/minibot**: paquete principal. Contiene la descripción del robot en URDF/Xacro, mundos de simulación, configuraciones de Nav2/SLAM y archivos de lanzamiento para simulador y en robot físico.
+* **src/ros_fundamentals_example**: paquete corto de fin educativo con ejemplos de Publishers y Subscribers escritos en C++ y Python.
+* **Dockerfile**: configuración para utilizar un contenedor de Docker en todo el entorno de desarrollo.
 * **Scripts de ayuda**:
-    * `quick_build.sh`: Compilacion rapida con Colcon.
-    * `robot_commands.sh`: Guia rapida de los comandos de teleoperacion.
-    * `docker_robot_guide.sh`: Guia de uso del contenedor de docker.
+    * `quick_build.sh`: Compilación rápida con Colcon.
+    * `robot_commands.sh`: Guía rápida de los comandos de teleoperación.
+    * `docker_robot_guide.sh`: Guía de uso del contenedor de Docker.
 
-## Instalacion y uso
+## Instalación y uso
 
-Se puede utilizar de dos aneras, via Docker (Recomendado) o instalacion nativa.
+Se puede utilizar de dos maneras, vía Docker (Recomendado) o instalación nativa.
 
 ### Utilizando Docker (Recomendado)
 
@@ -52,16 +52,16 @@ El repositorio incluye un `Dockerfile` optimizado basado en `osrf/ros:jazzy-desk
         ros_minibot_dev
     ```
 
-### Instalacion Nativa (Linux)
+### Instalación Nativa (Linux)
 
 ##### Requisitos
 * Ubuntu 24.04 (Noble Numbat)
 * ROS 2 Jazzy Jalisco
 * Gazebo Harmonic
 
-[https://docs.ros.org/en/jazzy/Installation.html](Instalacion ros2jazzy)
+[Instalación ROS 2 Jazzy](https://docs.ros.org/en/jazzy/Installation.html)
 
-Tras la instalacion de ros2 jazzy, realizar lo siguiente:
+Tras la instalación de ROS 2 Jazzy, realizar lo siguiente:
 
 1.  **Instalar dependencias:**
     ```bash
@@ -75,7 +75,7 @@ Tras la instalacion de ros2 jazzy, realizar lo siguiente:
     source install/setup.bash
     ```
 
-## Comandos basicos
+## Comandos básicos
 Una vez dentro del entorno (Docker o Nativo):
 
 * **Compilar:** `colcon build`
