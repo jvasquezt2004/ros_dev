@@ -114,8 +114,8 @@ Se ha integrado un nuevo entorno de simulación diseñado para pruebas de navega
 * **Geometría:**
     * **Tipo:** Pasillo recto (Corridor).
     * **Ancho de vía:** 1.0 metros (Distancia muro a muro), diseñado para probar la precisión del planificador local.
-* **Obstáculos:** 4 elementos dinámicos/estáticos distribuidos en el trayecto:
-    * 2 Cajas de madera.
+* **Obstáculos:** 5 elementos dinámicos/estáticos distribuidos en el trayecto:
+    * 3 Cajas de madera.
     * 2 Barriles industriales.
 * **Propósito:** Validar la capacidad del robot para maniobrar y evadir obstáculos sin colisionar en entornos estrechos donde el radio de giro Ackermann es crítico.
 
