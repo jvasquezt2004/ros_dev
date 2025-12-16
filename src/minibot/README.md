@@ -119,3 +119,4 @@ Se ha integrado un nuevo entorno de simulación diseñado para pruebas de navega
     * 2 Barriles industriales.
 * **Propósito:** Validar la capacidad del robot para maniobrar y evadir obstáculos sin colisionar en entornos estrechos donde el radio de giro Ackermann es crítico.
 
+![Vista Superior del Pasillo](images/blender_model.png)
