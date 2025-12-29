@@ -160,5 +160,20 @@
       </link>
     </model>
 
+  <include>
+      <uri>
+        https://fuel.gazebosim.org/1.0/OpenRobotics/models/Standing person
+      </uri>
+      <name>persona_prueba</name>
+      <pose>2.0 -1.0 0.0 0 0 0</pose> </include>
+
+    <include>
+      <uri>
+        https://fuel.gazebosim.org/1.0/OpenRobotics/models/Construction Cone
+      </uri>
+      <name>cono_prueba</name>
+      <pose>2.0 -1.0 0.0 0 0 0</pose>
+    </include>
+
   </world>
 </sdf>
