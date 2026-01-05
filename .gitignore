@@ -2,4 +2,5 @@ build/
 install/
 log/
 mise.toml
-.venv
+
+.venv/

@@ -43,5 +43,5 @@ setup(
     description='TODO: Package description',
     license='TODO: License declaration',
     extras_require={'test': ['pytest']},
-    entry_points={'console_scripts': []},
+    entry_points={'console_scripts': ['yolo_node = minibot.yolo_node:main',]},
 )
