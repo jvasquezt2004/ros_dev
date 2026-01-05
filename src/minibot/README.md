@@ -105,3 +105,18 @@ Dentro de la nueva ventana de RViz aparecerá el TF del robot. Selecciona **2D P
 
   * **config/nav2\_params.yaml**: Parámetros de navegación.
 
+## Escenarios de Prueba Personalizados
+
+### Mapa: Pasillo de Obstáculos
+Se ha integrado un nuevo entorno de simulación diseñado para pruebas de navegación en espacios confinados.
+
+* **Herramienta de Modelado:** Blender (Exportado a formato `.dae`/`.sdf`).
+* **Geometría:**
+    * **Tipo:** Pasillo recto (Corridor).
+    * **Ancho de vía:** 1.0 metros (Distancia muro a muro), diseñado para probar la precisión del planificador local.
+* **Obstáculos:** 5 elementos dinámicos/estáticos distribuidos en el trayecto:
+    * 3 Cajas de madera.
+    * 2 Barriles industriales.
+* **Propósito:** Validar la capacidad del robot para maniobrar y evadir obstáculos sin colisionar en entornos estrechos donde el radio de giro Ackermann es crítico.
+
+![Vista Superior del Pasillo](images/blender_model.png)
