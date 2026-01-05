@@ -12,7 +12,7 @@
 
 Este repositorio contiene un entorno de desarrollo para un robot autónomo con arquitectura Ackermann utilizando **ROS 2 Jazzy Jalisco** y **Gazebo Harmonic**.
 
-El proyecto es un robot Ackermann simulado y en físico con equipo Lidar y una cámara, configurado para navegación autónoma por medio de Nav2 y mapeo con SLAM Toolbox.
+El proyecto es un robot Ackermann simulado y en físico equipado con Lidar y cámara RGB, configurado para navegación autónoma mediante Nav2, mapeo con SLAM Toolbox y **detección de objetos en tiempo real con YOLOv8 nano**. El robot es capaz de navegar de forma autónoma mientras detecta y clasifica objetos en su entorno utilizando visión artificial.
 
 ## Estructura del proyecto
 
@@ -89,3 +89,76 @@ Una vez dentro del entorno (Docker o Nativo):
     ```bash
     ./robot_commands.sh
     ```
+
+## Detección de Objetos con YOLO
+
+El robot integra un sistema de detección de objetos en tiempo real basado en **YOLOv8 nano** de Ultralytics, capaz de identificar y clasificar 80 clases diferentes de objetos (personas, vehículos, animales, objetos cotidianos, etc.) mientras navega.
+
+### Características del Sistema
+
+* **Modelo:** YOLOv8 nano (versión más ligera y rápida de YOLOv8)
+* **Capacidades:** Detección de 80 clases de objetos del dataset COCO
+* **Umbral de confianza:** 10% (configurable en el código)
+* **Rendimiento:** Optimizado para ejecución en tiempo real
+* **Formatos disponibles:**
+    - PyTorch (`.pt`) para entrenamiento y desarrollo
+    - ONNX (`.onnx`) para inferencia optimizada
+
+### Uso del Nodo de Detección
+
+#### Requisitos Previos
+
+Instalar las dependencias de Python necesarias:
+```bash
+pip install ultralytics opencv-python
+```
+
+#### Ejecución
+
+**Terminal 1:** Iniciar la simulación con el robot
+```bash
+ros2 launch minibot sim_world_robot.launch.py
+```
+
+**Terminal 2:** Ejecutar el nodo de detección YOLO
+```bash
+ros2 run minibot yolo_node
+```
+
+El nodo se suscribe automáticamente al topic `/camera/image_raw` y comienza a procesar las imágenes en tiempo real. Las detecciones se visualizan en una ventana llamada "Minibot Vision" con bounding boxes y etiquetas sobre los objetos detectados.
+
+#### Topics de ROS 2
+
+* **Suscripción:** `/camera/image_raw` (sensor_msgs/Image) - Imágenes de la cámara del robot
+* **Publicación:** `/minibot/yolo_result` (sensor_msgs/Image) - Imágenes anotadas con detecciones
+
+### Objetos de Prueba
+
+Los mundos de simulación (`circuit.sdf` y `laberinto.sdf`) incluyen objetos detectables:
+* Personas (Standing person)
+* Conos de construcción (Construction Cone)
+
+### Script de Prueba
+
+Para probar YOLO de forma independiente sin ROS:
+```bash
+python3 test_yolo.py
+```
+
+Este script descarga una imagen de ejemplo y ejecuta el modelo para verificar que está funcionando correctamente.
+
+### Configuración Técnica
+
+El nodo está implementado en [minibot/yolo_node.py](src/minibot/minibot/yolo_node.py) y utiliza:
+* **cv_bridge:** Para convertir entre mensajes de ROS y matrices de OpenCV
+* **ultralytics:** Biblioteca oficial de YOLO para inferencia
+* **OpenCV:** Para visualización y procesamiento de imágenes
+
+Para modificar el umbral de confianza o cambiar el modelo, edita el archivo `yolo_node.py`:
+```python
+# Línea 37: Cambiar umbral de confianza
+results = self.model(cv_image, verbose=False, conf=0.1)  # 0.1 = 10%
+
+# Línea 25: Cambiar modelo
+self.model = YOLO("yolov8n.pt")  # Puedes usar yolov8s.pt, yolov8m.pt, etc.
+```
