@@ -162,3 +162,13 @@ results = self.model(cv_image, verbose=False, conf=0.1)  # 0.1 = 10%
 # Línea 25: Cambiar modelo
 self.model = YOLO("yolov8n.pt")  # Puedes usar yolov8s.pt, yolov8m.pt, etc.
 ```
+### Robot físico
+
+La siguiente parte de este proyecto fue integrar todo en el kit de robot físico que nos fue entregado por lo que teniendo los código que funcionaban dentro de la simulación se tuvieron que implementar estos al robot físico para el correcto funcionamiento del mismo. 
+
+[Robot_físico](src/minibot/images/robot_físico.jpeg)
+
+Foto del kit de robot físico que se nos fue entregado para el desarrollo del proyecto
+
+### Pasos para iniciar el robot físico 
+
