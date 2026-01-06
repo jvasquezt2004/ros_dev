@@ -162,14 +162,49 @@ results = self.model(cv_image, verbose=False, conf=0.1)  # 0.1 = 10%
 # Línea 25: Cambiar modelo
 self.model = YOLO("yolov8n.pt")  # Puedes usar yolov8s.pt, yolov8m.pt, etc.
 ```
-### Robot físico
 
-La siguiente parte de este proyecto fue integrar todo en el kit de robot físico que nos fue entregado por lo que teniendo los código que funcionaban dentro de la simulación se tuvieron que implementar estos al robot físico para el correcto funcionamiento del mismo. 
+### Implementación en Robot Físico
 
-![Robot_físico](src/minibot/images/robot_físico.jpeg)
+Esta sección documenta la adaptación del código de simulación al hardware real. Se integraron protocolos de comunicación entre una **Raspberry Pi (Cerebro ROS 2)** y un **Arduino (Controlador de motores)** para replicar la arquitectura Ackermann física.
 
-Foto del kit de robot físico que se nos fue entregado para el desarrollo del proyecto
+Especificaciones de Hardware 
 
-### Pasos para iniciar el robot físico 
+**Chasis:** Plataforma tipo coche (Ackermann) de 320x240x78 mm, peso 0.7 kg.
 
+**Sensores:** Lidar 2D: Escaneo 360°, rango 10m, 10Hz (Montado elevado a 9.8cm).
 
+**Cámara RGB:** Resolución 640x480, ubicada en el frente.
+
+**Tracción:** Ruedas traseras para empuje, ruedas delanteras con dirección (giro máx 0.6 rad).
+
+### Despliegue y Puesta en Marcha
+
+Para iniciar el robot físico, se utiliza una conexión SSH y se ejecutan los siguientes procesos distribuidos :
+
+```bash
+ssh rpi@<IP>
+cd ~/ros_dev
+colcon build --symlink-install
+source install/setup.bash
+```
+**Lanzamiento de Sensores y Descripción:** 
+
+Se ejecutan los launch files dedicados para levantar los drivers del Lidar, la cámara y el robot_state_publisher:
+```bash
+ros2 launch minibot bringup_lidar.launch.py
+ros2 launch minibot bringup_camera.launch.py
+ros2 launch minibot bringup_description.launch.py
+```
+
+**Ejecución de SLAM:** 
+
+Para el mapeo del entorno físico se utiliza slam_toolbox en modo asíncrono:
+```bash
+ros2 launch slam_toolbox online_async_launch.py slam_params_file:=/home/rpi/ros_dev/src/minibot/config/minibot_slam_mapping.yaml use_sim_time:=false
+```
+
+**Desafíos Técnicos y probelmatica**
+
+Durante la fase final de implementación, se identificó un problema crítico relacionado con la alimentación eléctrica del sistema debido a un fallo en el componente de la tarjeta odroid utilizada se hizo el cambio por una raspberry pi la cual genero problemas de corriente entre los componentes haciendo que a pesar de funcionar todo correctamente generaba corriente insuficiente para poder mover las ruedas del robot y el Lidar de manera simultanea.
+
+**Estado Actual:** La lógica de navegación y los protocolos de comunicación Arduino-ROS funcionan correctamente. El sistema es capaz de generar mapas y planificar rutas, quedando la ejecución física limitada únicamente por la capacidad de la batería actual.
